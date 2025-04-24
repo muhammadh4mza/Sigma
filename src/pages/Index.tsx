@@ -6,8 +6,71 @@ import HexagonGrid from "@/components/HexagonGrid";
 import Navbar from "@/components/Navbar";
 import StatItem from "@/components/StatItem";
 import WhatsNew from "@/components/WhatsNew";
+import HexagonCard from '@/components/HexagonCard';
+import ServicesList from '@/components/ServicesList';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { IndustryCard } from '../components/IndustryCard';
 
 const Index = () => {
+  const industries = [
+    {
+      title: "LOGISTICS",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/logistics-1.png"
+    },
+    { title: "AUTOMOTIVE",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/automotive-1.png"
+     },
+    { title: "FINTECH AND BANKING",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/image-9.png"
+     },
+    { title: "DEFENSE",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/Defence-1.png"
+     },
+    { title: "PUBLIC SECTOR",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/Public-sector-1.png"
+     },
+    { title: "MEDTECH",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/image-10.png"
+     },
+    { title: "GAMING",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/Games-1.png"
+     },
+    { title: "TELECOM",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/telecom-1.png"
+     },
+    { title: "RETAIL",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/Retail-1.png"
+     },
+    { title: "HIGH TECH",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/High-tech-1.png"
+     },
+    { title: "MANUFACTURING",
+      description: "We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.",
+      isActive: true,
+      image: "/src/assets/industry/Manufacturing-1.png"
+     }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-black overflow-hidden">
       <Navbar />
@@ -66,8 +129,83 @@ const Index = () => {
         
         {/* What's New Section - Full Width */}
         <div className="w-full">
-          <div className="py-16">
+          <div className="pt-16">
             <WhatsNew />
+          </div>
+        </div>
+
+        {/* Services Section */}
+        <div className="services-section">
+          <div className="services-container">
+            <h1 className="services-title">OUR SERVICES</h1>
+            <h2 className="services-subtitle">
+              FROM VISION TO INNOVATION—POWER YOUR IDEAS WITH OUR EXPERT DIGITAL AND ENGINEERING SOLUTIONS.
+            </h2>
+
+            <div className="hexagon-grid">
+              <HexagonCard 
+                title="DIGITAL & ENGINEERING"
+                isHighlighted={true}
+              />
+              <HexagonCard 
+                title="BUSINESS SOLUTIONS"
+                className="md:translate-y-16"
+              />
+              <HexagonCard 
+                title="PRODUCT INFORMATION"
+              />
+            </div>
+            
+            <div className="services-list-container">
+              <ServicesList />
+            </div>
+          </div>
+        </div>
+
+        {/* Industries Section */}
+        <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+          <div className="container mx-auto px-4 py-16 max-w-[1400px]">
+            <div className="max-w-[80rem] mx-auto mb-12">
+              <h1 className="text-5xl font-bold mb-6 text-gray-900 font-oswald">
+                INDUSTRIES
+              </h1>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                As a partner for innovation and digital disruption, we are bordering on the impossible. 
+                All organizations - from startups and small and medium businesses to large enterprises 
+                and governments - benefit from our broad range of industry-specific competence and 
+                technical depth.
+              </p>
+            </div>
+
+            <div className="relative mt-16">
+              <Carousel
+                className="industries-carousel"
+                opts={{
+                  loop: true,
+                  align: "start",
+                  slidesToScroll: 4, // Changed to scroll 4 slides
+                  slides: { 
+                    perView: 4, // Show 4 slides at once
+                    spacing: 16 
+                  }
+                }}
+              >
+                <CarouselContent className="-ml-4">
+                  {industries.map((industry, index) => (
+                    <CarouselItem 
+                      key={index} 
+                      className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4" // Updated basis for 4 columns
+                    >
+                      <div className="carousel-image-container">
+                        <IndustryCard {...industry} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="carousel-button carousel-button-prev" />
+                <CarouselNext className="carousel-button carousel-button-next" />
+              </Carousel>
+            </div>
           </div>
         </div>
       </main>

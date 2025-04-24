@@ -10,6 +10,7 @@ import HexagonCard from '@/components/HexagonCard';
 import ServicesList from '@/components/ServicesList';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { IndustryCard } from '../components/IndustryCard';
+import IndustriesCarousel from '@/components/IndustriesCarousel';
 
 const Index = () => {
   const industries = [
@@ -163,51 +164,7 @@ const Index = () => {
         </div>
 
         {/* Industries Section */}
-        <div className="w-full min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-          <div className="container mx-auto px-4 py-16 max-w-[1400px]">
-            <div className="max-w-[80rem] mx-auto mb-12">
-              <h1 className="text-5xl font-bold mb-6 text-gray-900 font-oswald">
-                INDUSTRIES
-              </h1>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                As a partner for innovation and digital disruption, we are bordering on the impossible. 
-                All organizations - from startups and small and medium businesses to large enterprises 
-                and governments - benefit from our broad range of industry-specific competence and 
-                technical depth.
-              </p>
-            </div>
-
-            <div className="relative mt-16">
-              <Carousel
-                className="industries-carousel"
-                opts={{
-                  loop: true,
-                  align: "start",
-                  slidesToScroll: 4, // Changed to scroll 4 slides
-                  slides: { 
-                    perView: 4, // Show 4 slides at once
-                    spacing: 16 
-                  }
-                }}
-              >
-                <CarouselContent className="-ml-4">
-                  {industries.map((industry, index) => (
-                    <CarouselItem 
-                      key={index} 
-                      className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4" // Updated basis for 4 columns
-                    >
-                      <div className="carousel-image-container">
-                        <IndustryCard {...industry} />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="carousel-button carousel-button-prev" />
-                <CarouselNext className="carousel-button carousel-button-next" />
-              </Carousel>
-            </div>
-          </div>
-        </div>
+        <IndustriesCarousel industries={industries} />
       </main>
     </div>
   );

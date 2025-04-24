@@ -256,29 +256,46 @@
 }
 
 .carousel-image-container {
-  height: 400px;
+  height: 500px;
   padding: 0.5rem;
 }
 
-/* Responsive handling */
-@media (max-width: 1024px) {
-  .carousel-item {
-    flex: 0 0 33.333333%; /* 3 slides on medium screens */
-  }
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.carousel-nav-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  margin: 0 1rem;
+  z-index: 20;
+}
+
+.carousel-nav-button:hover {
+  background-color: #b91c1c;
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-  .carousel-item {
-    flex: 0 0 50%; /* 2 slides on small screens */
-  }
-}
-
-@media (max-width: 640px) {
-  .carousel-item {
-    flex: 0 0 100%; /* 1 slide on mobile */
+  .carousel-nav-button {
+    display: none;
   }
 }
 
 .transition-colors{
-  color: #8e0f0c;
+  transition: color 0.3s ease-in-out;
 }

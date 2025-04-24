@@ -1,4 +1,4 @@
-import React from "react";
+import "@/styles/style.css";
 
 // Components
 import HeroSection from "@/components/HeroSection";
@@ -15,19 +15,19 @@ const Index = () => {
       
       <main className="flex-1 bg-white">
         {/* About Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="main-container">
+          <div className="content-grid">
             {/* Left side - Hexagon grid */}
-            <div className="w-full lg:w-1/2">
+            <div>
               <HexagonGrid />
             </div>
             
             {/* Right side - Text content */}
-            <div className="w-full lg:w-1/2 space-y-8">
-              <h1 className="text-6xl font-bold leading-tight tracking-tight">
-                A <span className="text-sky-400">GLOBAL</span><br />
-                <span className="text-sky-400">COMPANY</span> WITH<br />
-                FAMILY <span className="text-sky-400">SPIRIT</span>
+            <div className="space-y-8">
+              <h1 className="main-heading">
+                A <span className="heading-highlight">GLOBAL</span><br />
+                <span className="heading-highlight">COMPANY</span> WITH<br />
+                FAMILY <span className="heading-highlight">SPIRIT</span>
               </h1>
               
               <div className="space-y-6 text-gray-600">
@@ -63,7 +63,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-
+        
         {/* What's New Section - Full Width */}
         <div className="w-full">
           <div className="py-16">

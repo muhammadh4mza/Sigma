@@ -1,0 +1,36 @@
+.heading-highlight {
+  color: #87c2e7; /* This is equivalent to sky-400 */
+  font-weight: bold;
+}
+
+.main-heading {
+  font-size: 3.75rem; /* equivalent to text-6xl */
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 1rem;
+  min-height: 800px;
+}
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .content-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .content-grid > div {
+    width: 50%;
+  }
+}

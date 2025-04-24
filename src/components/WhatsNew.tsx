@@ -58,18 +58,18 @@ const newsItems: NewsItem[] = [
 
 const WhatsNew = () => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#f0e5e8]">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col mb-8">
-          <div className="flex flex-row items-end gap-4">
-            <h2 className="text-[64px] font-bold text-gray-800">WHAT'S NEW</h2>
-            <p className="text-[24px] text-gray-600">
+    <section className="whats-new-section">
+      <div className="whats-new-container">
+        <div className="whats-new-header">
+          <div className="whats-new-title-wrapper">
+            <h2 className="whats-new-title">WHAT'S NEW</h2>
+            <p className="whats-new-subtitle">
               There is always something going on! Discover our latest news and insights.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="news-grid">
           {newsItems.map((item, index) => (
             <NewsCard 
               key={index} 
@@ -81,20 +81,17 @@ const WhatsNew = () => {
           ))}
         </div>
 
-        <div className="flex justify-between items-center">
-          <div className="flex gap-2">
-            <button className="p-2 border border-[#8e0f0c] rounded-full hover:bg-[#8e0f0c]/10 transition-colors group">
-              <ChevronLeft className="w-5 h-5 text-[#8e0f0c] group-hover:text-[#8e0f0c]" />
+        <div className="navigation-container">
+          <div className="nav-buttons">
+            <button className="nav-button">
+              <ChevronLeft className="w-5 h-5 text-[#8e0f0c]" />
             </button>
-            <button className="p-2 border border-[#8e0f0c] rounded-full hover:bg-[#8e0f0c]/10 transition-colors group">
-              <ChevronRight className="w-5 h-5 text-[#8e0f0c] group-hover:text-[#8e0f0c]" />
+            <button className="nav-button">
+              <ChevronRight className="w-5 h-5 text-[#8e0f0c]" />
             </button>
           </div>
           
-          <a
-            href="#"
-            className="inline-flex items-center text-[#8e0f0c] hover:text-[#8e0f0c]/80 font-medium border border-[#8e0f0c] px-4 py-2 rounded hover:bg-[#8e0f0c]/10 transition-colors"
-          >
+          <a href="#" className="read-more-button">
             READ ALL NEWS
             <ChevronRight className="w-4 h-4 ml-1" />
           </a>

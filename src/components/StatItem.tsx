@@ -26,7 +26,7 @@ const StatItem: React.FC<StatItemProps> = ({ number, description }) => {
         {description.map((line, index) => (
           <p 
             key={index} 
-            className="text-sm text-gray-600 dark:text-gray-300 font-medium"
+            className="stat-description"
           >
             {line}
           </p>

@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 h-full flex flex-col justify-center items-center text-white">
+      <div className="relative z-20 h-full flex flex-col justify-center items-center text-white font-oswald">
         {/* Heading */}
         <div className="text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-16 md:mb-24 tracking-wider uppercase">

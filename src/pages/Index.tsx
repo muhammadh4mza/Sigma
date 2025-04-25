@@ -137,20 +137,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Services Section
-        <div className="services-section">
-          <div className="services-container">
-            <h1 className="services-title">OUR SERVICES</h1>
-            <h2 className="services-subtitle">
-              FROM VISION TO INNOVATION—POWER YOUR IDEAS WITH OUR EXPERT DIGITAL AND ENGINEERING SOLUTIONS.
-            </h2>
-
-            
-            <div className="services-list-container">
-              <ServicesList />
-            </div>
-          </div>
-        </div> */}
 
         {/* Industries Section */}
         <ServicesSection/>

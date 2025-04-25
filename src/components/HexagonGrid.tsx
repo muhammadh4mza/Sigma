@@ -15,8 +15,8 @@ const HexagonGrid: React.FC<HexagonGridProps> = ({ className }) => {
         ${className || ''}
       `}
     >
-      <TiltedCard>
-        <div className="w-full h-[800px] overflow-hidden rounded-lg shadow-lg"> {/* Increased height from 600px to 800px */}
+      <TiltedCard imageSrc={aboutImage}>
+        <div className="w-full h-[800px] overflow-hidden rounded-lg shadow-lg">
           <img 
             src={aboutImage} 
             alt="About Section Image"

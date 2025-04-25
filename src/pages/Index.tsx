@@ -11,6 +11,9 @@ import ServicesList from '@/components/ServicesList';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { IndustryCard } from '../components/IndustryCard';
 import IndustriesCarousel from '@/components/IndustriesCarousel';
+import ValuesAndVision from "@/components/ValuesAndVision";
+import Career from "@/components/career";
+import IndustriesSection from "@/components/IndustriesSection";
 
 const Index = () => {
   const industries = [
@@ -165,6 +168,10 @@ const Index = () => {
 
         {/* Industries Section */}
         <IndustriesCarousel industries={industries} />
+        <IndustriesSection/>
+        <ValuesAndVision />
+        <Career />
+
       </main>
     </div>
   );

@@ -32,6 +32,7 @@ const HeroSection: React.FC = () => {
           <BlurText
             text="SIGMA TECHNOLOGY GROUP"
             className="text-5xl md:text-7xl font-bold mb-16 md:mb-24 tracking-wider uppercase"
+            delay={370}
           />
         </div>
 

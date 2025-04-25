@@ -70,10 +70,9 @@ const ServicesSection = () => {
                     ></div>
                     
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-[#1c1c1c] opacity-90"></div>
+                    <div className="absolute inset-0 bg-gray-900 "></div>
                     
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] via-[#2c2c2c] to-[#1c1c1c] opacity-80"></div>
+                    
                     
                     {/* Pattern/texture (optional) */}
                     <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>

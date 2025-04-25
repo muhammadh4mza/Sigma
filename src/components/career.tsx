@@ -19,7 +19,7 @@ const Career: React.FC = () => {
       {/* Content Overlay */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-white px-4 md:px-8">
         <div className="max-w-4xl text-center">
-          <h2 className="text-[64px] md:text-[80px] font-bold mb-4 leading-tight text-[#f5f5f5]">
+          <h2 className="text-[64px] md:text-[80px] font-bold mb-4 leading-tight text-[#f5f5f5] uppercase">
             Career
           </h2>
           <p className="text-lg md:text-xl mb-8">

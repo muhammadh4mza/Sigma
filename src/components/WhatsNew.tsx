@@ -58,40 +58,40 @@ const newsItems: NewsItem[] = [
 
 const WhatsNew = () => {
   return (
-    <section className="whats-new-section">
-      <div className="whats-new-container">
-        <div className="whats-new-header">
+    <section className="whats-new-section py-[150px] px-4 sm:px-6 lg:px-8">
+      <div className="whats-new-container max-w-7xl mx-auto">
+        <div className="whats-new-header mb-12">
           <div className="whats-new-title-wrapper">
-            <h2 className="whats-new-title">WHAT'S NEW</h2>
-            <p className="whats-new-subtitle">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-bold text-gray/900 mb-4 leading-tight uppercase">WHAT'S NEW</h2>
+            <p className="whats-new-subtitle text-lg text-gray-900 max-w-2xl">
               There is always something going on! Discover our latest news and insights.
             </p>
           </div>
         </div>
 
-        <div className="news-grid">
+        <div className="news-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {newsItems.map((item, index) => (
             <NewsCard 
               key={index} 
               imageUrl={item.imageUrl} 
               title={item.title}
               date={item.date}
-              className={index === 0 ? "md:col-span-2 lg:col-span-1" : ""} 
+              className={index === 0 ? "sm:col-span-2 lg:col-span-1" : ""} 
             />
           ))}
         </div>
 
-        <div className="navigation-container">
-          <div className="nav-buttons">
-            <button className="nav-button">
+        <div className="navigation-container flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="nav-buttons flex gap-2">
+            <button className="nav-button p-2 rounded-full hover:bg-gray-800 transition-colors">
               <ChevronLeft className="w-5 h-5 text-[#8e0f0c]" />
             </button>
-            <button className="nav-button">
+            <button className="nav-button p-2 rounded-full hover:bg-gray-800 transition-colors">
               <ChevronRight className="w-5 h-5 text-[#8e0f0c]" />
             </button>
           </div>
           
-          <a href="#" className="read-more-button">
+          <a href="#" className="read-more-button flex items-center text-[#8e0f0c] hover:bg-[#8e0f0c] hover:text-white transition-colors px-4 py-2 rounded-md">
             READ ALL NEWS
             <ChevronRight className="w-4 h-4 ml-1" />
           </a>

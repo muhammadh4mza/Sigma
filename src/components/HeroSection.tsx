@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import herovideo from "../assets/video/video-background.mp4";
+import BlurText from "../TextAnimations/BlurText/BlurText";
 
 const HeroSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -25,14 +26,13 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 h-full flex flex-col justify-center items-center text-white font-oswald">
+      <div className="relative z-20 h-full flex flex-col justify-center items-center text-white">
         {/* Heading */}
         <div className="text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-16 md:mb-24 tracking-wider uppercase">
-            SIGMA TECHNOLOGY
-            <br />
-            GROUP
-          </h1>
+          <BlurText
+            text="SIGMA TECHNOLOGY GROUP"
+            className="text-5xl md:text-7xl font-bold mb-16 md:mb-24 tracking-wider uppercase"
+          />
         </div>
 
         {/* Stats */}

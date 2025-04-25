@@ -56,7 +56,7 @@ const WhatsNewSlider = () => {
     <section className="py-[75px] bg-[#f0e5e8]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h2 className="text-[80px] font-bold text-black mb-4 uppercase">WHAT'S NEW</h2>
+          <h2 className="text-[64px] font-bold text-black mb-4 uppercase">WHAT'S NEW</h2>
           <p className="text-black text-lg max-w-2xl">
             There is always something going on! Discover our latest news and insights.
           </p>

@@ -50,7 +50,7 @@ const HexagonHeroSection = () => {
           {/* Right Column - Content Section */}
           <div className="w-full md:w-7/12">
             {/* Heading */}
-            <h2 className="text-[80px] font-bold mb-6 uppercase leading-tight">
+            <h2 className="text-[64px] font-bold mb-6 uppercase leading-tight">
               A <span className="text-[#87c2e7]">GLOBAL<br />COMPANY</span> WITH<br />
               FAMILY <span className="text-[#87c2e7]">SPIRIT</span>
             </h2>

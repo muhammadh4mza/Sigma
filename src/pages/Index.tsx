@@ -1,16 +1,14 @@
 import "@/styles/style.css";
 
 // Components
-import HeroSection from "@/components/HeroSection";
-import HexagonGrid from "@/components/HexagonGrid";
 import Navbar from "@/components/Navbar";
-import StatItem from "@/components/StatItem";
+import HeroVideoSection from "@/components/HeroVideoSection";
 import WhatsNewSlider from "@/components/WhatsNewSlider";
 import ServicesSection from "@/components/ServicesSection";
 import IndustriesSection from "@/components/IndustriesSection";
 import ValuesAndVision from "@/components/ValuesAndVision";
 import Career from "@/components/career";
-import HexagonHeroSection from "./HexagonHeroSection";
+import HexagonHeroSection from "@/components/HexagonHeroSection";
 
 const Index = () => {
   
@@ -18,7 +16,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black overflow-hidden">
       <Navbar />
-      <HeroSection />
+      <HeroVideoSection />
       <HexagonHeroSection />
       
       <main className="flex-1 bg-white">

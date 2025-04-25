@@ -81,7 +81,7 @@ const ServicesSection = () => {
                   <div className="container mx-auto px-4 relative z-10 min-h-[70vh]"> {/* Added min-h */}
                     {/* Title */}
                     <div className="text-center mb-16">
-                      <h2 className="text-[64px] md:text-[80px] font-bold text-white mb-4 leading-tight uppercase">
+                      <h2 className="text-[64px] md:text-[64px] font-bold text-white mb-4 leading-tight uppercase">
                         <span className="text-red-600">Our</span> Services
                       </h2>
                       <div className="w-[250px] h-1 bg-red-600 mx-auto"></div>

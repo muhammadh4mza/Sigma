@@ -121,7 +121,7 @@ const IndustriesSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column */}
           <div className="space-y-8">
-            <h2 className="text-[64px] md:text-[80px] font-bold mb-4 leading-tight text-[#dc2626]">INDUSTRIES</h2>
+            <h2 className="text-[64px] md:text-[64px] font-bold mb-4 leading-tight text-[#dc2626]">INDUSTRIES</h2>
             <p className="text-lg text-gray-600">
               As a partner for innovation and digital disruption, we are bordering on the impossible. 
               All organizations - from startups and small and medium businesses to large enterprises 

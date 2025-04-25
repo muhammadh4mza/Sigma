@@ -62,7 +62,7 @@ const WhatsNew = () => {
       <div className="whats-new-container max-w-7xl mx-auto">
         <div className="whats-new-header mb-12">
           <div className="whats-new-title-wrapper">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[80px] font-bold text-gray/900 mb-4 leading-tight uppercase">WHAT'S NEW</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold text-gray/900 mb-4 leading-tight uppercase">WHAT'S NEW</h2>
             <p className="whats-new-subtitle text-lg text-gray-900 max-w-2xl">
               There is always something going on! Discover our latest news and insights.
             </p>

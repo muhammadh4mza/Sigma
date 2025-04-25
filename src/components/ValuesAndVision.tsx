@@ -73,7 +73,7 @@ const ValuesAndVision = () => {
       {/* Fixed Title */}
       <div className="sticky top-0 z-40 py-12 bg-gradient-to-b from-white via-white to-transparent">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-[64px] md:text-[80px] font-bold mb-4 leading-tight text-[#dc2626]">VALUES AND VISION</h2>
+          <h2 className="text-[64px] md:text-[64px] font-bold mb-4 leading-tight text-[#dc2626]">VALUES AND VISION</h2>
           <p className="text-xl text-black/80 mt-4 max-w-3xl mx-auto">
             Whatever we do, we do it with one and the same promise - Expect a Better Tomorrow
           </p>

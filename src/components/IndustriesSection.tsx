@@ -20,7 +20,7 @@ const industries: IndustryItem[] = [
     description: 'We support world-leading automobile manufacturers in developing intelligent IT solutions, including electrification, autonomous driving, active safety, and complex embedded systems.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1automotive-1.webp',
     link: '/industry/automotive',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const industries: IndustryItem[] = [
     description: 'We collaborate with private companies to build highly secure technology solutions and provide services for product information creation and management.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Defence-1.webp',
     link: '/industry/manufacturing',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const industries: IndustryItem[] = [
     description: 'We leverage digital convergence and technological excellence to boost the healthcare sector and create superior custom digital and product information solutions.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/image-10.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const industries: IndustryItem[] = [
     description: 'We support the telecom industry on the way to a big change. Using our years of experience in the telecommunications industry, we develop custom telecom software and other solutions that enhance employee and customer experience.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1telecom-1.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const industries: IndustryItem[] = [
     description: 'We support logistics companies with digital solutions to make operation management leaner, smarter and more cost-efficient.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Logistics-1.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const industries: IndustryItem[] = [
     description: 'We help international companies streamline and automate the manufacturing process and leverage data for predictive analytics and transform product information to achieve excellence in customer experience.',
     image: 'https://sigmatechnology.com/content/uploads/2023/03/Property-1Manufacturing-1.png',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const industries: IndustryItem[] = [
     description: 'We help organizations of the financial sector innovate and unleash the transformative power of digitalization through custom solutions that perfectly weave into their business DNA.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/image-9.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 8,
@@ -76,7 +76,7 @@ const industries: IndustryItem[] = [
     description: 'We support all grades of government and government-controlled organizations with custom technological solutions and digitalization services to step towards innovations.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Public-sector-1.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 9,
@@ -84,7 +84,7 @@ const industries: IndustryItem[] = [
     description: 'We support the gaming industry with the evolutionary development, design, support, and maintenance of ed-tech products, gaming platforms, and online games.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Games-1.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 10,
@@ -92,7 +92,7 @@ const industries: IndustryItem[] = [
     description: 'We help retail businesses and e-commerce projects to implement or design from scratch future-proof technologies supported with advanced data and, predictive analytics & BI services.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Retail-1.webp',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
   {
     id: 11,
@@ -100,7 +100,7 @@ const industries: IndustryItem[] = [
     description: 'We help high-tech companies and innovative startups meet Industry 4.0 and embrace digital transformation at scale. Providing comprehensive IT solutions and technology consulting, we open opportunities for the breakthrough to the forefront of innovation.',
     image: 'https://sigmatechnology.com/content/uploads/2023/03/Property-1High-tech-1.png',
     link: '/industry/healthcare',
-    linkText: 'Ask For Consultation'
+    linkText: 'ASK FOR CONSULTATION'
   },
 ];
 
@@ -121,7 +121,7 @@ const IndustriesSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column */}
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#dc2626]">INDUSTRIES</h2>
+            <h2 className="text-[64px] md:text-[80px] font-bold mb-4 leading-tight text-[#dc2626]">INDUSTRIES</h2>
             <p className="text-lg text-gray-600">
               As a partner for innovation and digital disruption, we are bordering on the impossible. 
               All organizations - from startups and small and medium businesses to large enterprises 
@@ -141,7 +141,7 @@ const IndustriesSection: React.FC = () => {
                     }`}
                   onClick={() => handleButtonClick(index)}
                 >
-                  <h3 className="text-lg font-medium">{industry.title}</h3>
+                  <h3 className="text-lg font-medium uppercase">{industry.title}</h3>
                 </button>
               ))}
             </div>
@@ -176,7 +176,7 @@ const IndustriesSection: React.FC = () => {
                       />
                     </div>
                     <div className="p-6 md:p-8 flex-grow">
-                      <h3 className="text-xl md:text-2xl font-bold mb-4">{industry.title}</h3>
+                      <h3 className="text-xl md:text-2xl font-bold mb-4 uppercase">{industry.title}</h3>
                       <p className="text-gray-600 mb-6">{industry.description}</p>
                       <a
                         href={industry.link}

@@ -1,15 +1,53 @@
 import React, { useState, useEffect } from 'react';
 
-const ValuesAndVision: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<number>(1);
+interface Section {
+  id: string;
+  title: string;
+  content: string;
+  isReport?: boolean;
+  reportLink?: string;
+  bgImage?: string;
+}
+
+const sections: Section[] = [
+  {
+    id: 'section1',
+    title: 'Company, where people are in focus',
+    content: 'We celebrate our people not for how well they fit into the standards but for everything they bring with their true selves. We encourage every development opportunity to make sure our people are empowered to live authentically, grow to their full potential, and live purposefully.',
+    bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-1.webp'
+  },
+  {
+    id: 'section2',
+    title: 'Sustainable development for a sustainable world',
+    content: 'Through continuous improvement of our operations and sustainability performance, Sigma Technology strives to contribute to the progress of society. To put our words into concrete actions, we foster community development, education, innovation, gender equality, diversity, responsible consumption, and ethical business practices.',
+    bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-2.webp'
+  },
+  {
+    id: 'section3',
+    title: 'Making\ntechnology usable',
+    content: 'We envision a future where technology is seamlessly integrated into our everyday lives, making it more efficient and accessible. We strive to create products and services that improve people\'s lives and make the world a better place.',
+    bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-3.webp'
+  },
+  {
+    id: 'section4',
+    title: 'SUSTAINABILITY\nREPORT 2023',
+    content: 'Our CSR report provides an overview of our company\'s efforts and progress towards sustainable practices and social responsibility. Through this report, we aim to transparently communicate our commitments and actions towards creating a positive impact on society and the environment.',
+    isReport: true,
+    reportLink: 'https://sigmatechnology.com/content/uploads/2025/02/CSR-Report-2023-final-version.pdf',
+    bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-4.webp'
+  }
+];
+
+const ValuesAndVision = () => {
+  const [activeSection, setActiveSection] = useState('section1');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id^="section"]');
-      sections.forEach((section) => {
+      const sections = document.querySelectorAll('.value-section');
+      sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-          setActiveSection(parseInt(section.id.replace('section', '')));
+          setActiveSection(section.id);
         }
       });
     };
@@ -20,143 +58,74 @@ const ValuesAndVision: React.FC = () => {
 
   return (
     <div className="relative">
-      {/* Navigation dots */}
-      <div className="container mx-auto">
-        <ul className="fixed left-8 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
-          {[1, 2, 3, 4].map((num) => (
-            <li key={num}>
+      {/* Navigation Dots */}
+      <div className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+        <ul className="space-y-4">
+          {sections.map((section) => (
+            <li key={section.id}>
               <a
-                href={`#section${num}`}
-                className={`block w-3 h-3 rounded-full transition-all duration-300 ${
-                  activeSection === num ? 'bg-blue-500' : 'bg-gray-300 hover:bg-blue-300'
-                }`}
+                href={`#${section.id}`}
+                className={`block w-3 h-3 rounded-full border-2 border-white transition-all
+                  ${activeSection === section.id ? 'bg-white' : 'bg-transparent'}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                }}
               />
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Fixed title */}
-      <div className="fixed top-14 left-0 right-0 z-10 bg-white/80 backdrop-blur-sm">
-        <div className="container mx-auto py-4">
-          <h2 className="text-2xl font-bold">VALUES AND VISION</h2>
+      {/* Fixed Title */}
+      <div className="sticky top-0 z-40 py-12 bg-gradient-to-b from-black/70 to-transparent">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-white">VALUES AND VISION</h2>
+          <p className="text-xl text-white/80 mt-4">
+            Whatever we do, we do it with one and the same promise - Expect a Better Tomorrow
+          </p>
         </div>
       </div>
 
-      {/* Desktop Sections */}
-      <div className="hidden md:block">
-        {/* Your existing desktop sections here */}
-        {/* Each section remains the same as in your current code */}
-        <section className="pt-36 activeValue" id="section1">
-          <div className="container mx-auto">
-            <p className="text-lg mb-8">Whatever we do, we do it with one and the same promise - Expect a Better Tomorrow</p>
-            <div className="content-value-1">
-              <div className="hex-value-1 p-8 bg-white shadow-lg rounded-lg">
-                <h3 className="text-xl font-bold mb-4">Company, where people are in focus</h3>
-                <p className="text-gray-700">We celebrate our people not for how well they fit into the standards but for everything they bring with their true selves. We encourage every development opportunity to make sure our people are empowered to live authentically, grow to their full potential, and live purposefully.</p>
-              </div>
-            </div>
+      {/* Sections */}
+      {sections.map((section, index) => (
+        <section
+          key={section.id}
+          id={section.id}
+          className="value-section relative min-h-screen flex items-center"
+        >
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={section.bgImage}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60" />
           </div>
-        </section>
-        
-        <section className="py-20 activeValue" id="section2">
-          <div className="container mx-auto">
-            <div className="content-value-2">
-              <div className="hex-value-2 p-8 bg-white shadow-lg rounded-lg relative">
-                <div className="value2-left absolute left-0 top-0 w-16 h-full bg-blue-100"></div>
-                <h3 className="text-xl font-bold mb-4 ml-20">Sustainable development for a sustainable world</h3>
-                <p className="text-gray-700 ml-20">Through continuous improvement of our operations and sustainability performance, Sigma Technology strives to contribute to the progress of society. To put our words into concrete actions, we foster community development, education, innovation, gender equality, diversity, responsible consumption, and ethical business practices.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-20" id="section3">
-          <div className="container mx-auto">
-            <div className="content-value-3">
-              <div className="hex-value-3 p-8 bg-white shadow-lg rounded-lg relative">
-                <div className="value3-left absolute left-0 top-0 w-16 h-full bg-blue-100"></div>
-                <div className="value31-left absolute left-16 top-0 w-4 h-full bg-blue-200"></div>
-                <div className="value32-left absolute left-20 top-0 w-4 h-full bg-blue-300"></div>
-                <div className="value33-left absolute left-24 top-0 w-4 h-full bg-blue-400"></div>
-                <h3 className="text-xl font-bold mb-4 ml-28">Making<br />technology usable</h3>
-                <p className="text-gray-700 ml-28">We envision a future where technology is seamlessly integrated into our everyday lives, making it more efficient and accessible. We strive to create products and services that improve people's lives and make the world a better place.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-20" id="section4">
-          <div className="container mx-auto">
-            <div className="content-value-4">
-              <div className="hex-value-4 p-8 bg-white shadow-lg rounded-lg relative">
-                <div className="value4-left absolute left-0 top-0 w-16 h-full bg-blue-100"></div>
-                <div className="value41-left absolute left-16 top-0 w-4 h-full bg-blue-200"></div>
-                <div className="value42-left absolute left-20 top-0 w-4 h-full bg-blue-300"></div>
-                <div className="value43-left absolute left-24 top-0 w-4 h-full bg-blue-400"></div>
-                <h3 className="text-xl font-bold mb-4 ml-28">SUSTAINBILITY<br />REPORT 2023</h3>
-                <p className="text-gray-700 ml-28 mb-6">Our CSR report provides an overview of our company's efforts and progress towards sustainable practices and social responsibility. Through this report, we aim to transparently communicate our commitments and actions towards creating a positive impact on society and the environment.</p>
-                <a href="https://sigmatechnology.com/content/uploads/2025/02/CSR-Report-2023-final-version.pdf?x25367" className="ml-28 inline-block px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Read more</a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
 
-      {/* Mobile Sections */}
-      <div className="block md:hidden">
-        <section className="py-10 title-val">
-          <div className="container mx-auto">
-            <p className="font-bold">VALUES AND VISION</p>
-            <p className="text-lg mt-2">Whatever we do, we do it with one and the same promise - Expect a Better Tomorrow</p>
-          </div>
-        </section>
-        
-        <section className="py-10">
-          <div className="container mx-auto">
-            <div className="content-value-mobile-1 p-6 bg-white rounded-lg shadow">
-              <div className="hex-value-mobile-1">
-                <p className="font-bold mb-3">Company, where people are in focus</p>
-                <p className="text-gray-700">We celebrate our people not for how well they fit into the standards but for everything they bring with their true selves. We encourage every development opportunity to make sure our people are empowered to live authentically, grow to their full potential, and live purposefully.</p>
-              </div>
+          {/* Content */}
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8 text-white">
+              <h3 className="text-3xl font-bold mb-6 whitespace-pre-line">
+                {section.title}
+              </h3>
+              <p className="text-lg mb-6 text-white/90">
+                {section.content}
+              </p>
+              {section.isReport && (
+                <a
+                  href={section.reportLink}
+                  className="inline-block px-6 py-3 bg-white text-black rounded-full 
+                    hover:bg-gray-100 transition-colors"
+                >
+                  Read more
+                </a>
+              )}
             </div>
           </div>
         </section>
-        
-        <section className="py-10">
-          <div className="container mx-auto">
-            <div className="content-value-mobile-2 p-6 bg-white rounded-lg shadow">
-              <div className="hex-value-mobile-2">
-                <p className="font-bold mb-3">Sustainable development for a sustainable world</p>
-                <p className="text-gray-700">Through continuous improvement of our operations and sustainability performance, Sigma Technology strives to contribute to the progress of society. To put our words into concrete actions, we foster community development, education, innovation, gender equality, diversity, responsible consumption, and ethical business practices.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-10">
-          <div className="container mx-auto">
-            <div className="content-value-mobile-3 p-6 bg-white rounded-lg shadow">
-              <div className="hex-value-mobile-3">
-                <p className="font-bold mb-3">Making<br />technology usable</p>
-                <p className="text-gray-700">We envision a future where technology is seamlessly integrated into our everyday lives, making it more efficient and accessible. We strive to create products and services that improve people's lives and make the world a better place.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-10">
-          <div className="container mx-auto">
-            <div className="content-value-mobile-4 p-6 bg-white rounded-lg shadow mb-6">
-              <div className="hex-value-mobile-4">
-                <p className="font-bold mb-3">SUSTAINBILITY<br />REPORT 2023</p>
-                <p className="text-gray-700">Our CSR report provides an overview of our company's efforts and progress towards sustainable practices and social responsibility. Through this report, we aim to transparently communicate our commitments and actions towards creating a positive impact on society and the environment.</p>
-              </div>
-            </div>
-            <a href="https://sigmatechnology.com/content/uploads/2025/02/CSR-Report-2023-final-version.pdf?x25367" className="inline-block px-6 py-2 bg-white text-blue-500 border border-blue-500 rounded hover:bg-blue-50 transition">Read more</a>
-          </div>
-        </section>
-      </div>
+      ))}
     </div>
   );
 };

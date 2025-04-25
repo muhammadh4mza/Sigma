@@ -299,3 +299,40 @@
 .transition-colors{
   transition: color 0.3s ease-in-out;
 }
+
+.swiper-slide {
+  height: auto;
+}
+
+.article {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.article:hover {
+  transform: scale(1.02);
+}
+
+.article-link img {
+  transition: transform 0.3s ease;
+}
+
+.article:hover .article-link img {
+  transform: translateX(5px);
+}
+
+.clip-path-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.value-section {
+  scroll-snap-align: start;
+}
+
+.value-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
+}

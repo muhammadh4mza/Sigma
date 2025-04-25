@@ -8,12 +8,11 @@ import StatItem from "@/components/StatItem";
 import WhatsNew from "@/components/WhatsNew";
 import HexagonCard from '@/components/HexagonCard';
 import ServicesList from '@/components/ServicesList';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { IndustryCard } from '../components/IndustryCard';
-import IndustriesCarousel from '@/components/IndustriesCarousel';
 import ValuesAndVision from "@/components/ValuesAndVision";
 import Career from "@/components/career";
 import IndustriesSection from "@/components/IndustriesSection";
+import OurService from "./Ourservice";
+import ServicesSection from "@/components/ServicesSection";
 
 const Index = () => {
   const industries = [
@@ -138,36 +137,10 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Services Section */}
-        <div className="services-section">
-          <div className="services-container">
-            <h1 className="services-title">OUR SERVICES</h1>
-            <h2 className="services-subtitle">
-              FROM VISION TO INNOVATION—POWER YOUR IDEAS WITH OUR EXPERT DIGITAL AND ENGINEERING SOLUTIONS.
-            </h2>
-
-            <div className="hexagon-grid">
-              <HexagonCard 
-                title="DIGITAL & ENGINEERING"
-                isHighlighted={true}
-              />
-              <HexagonCard 
-                title="BUSINESS SOLUTIONS"
-                className="md:translate-y-16"
-              />
-              <HexagonCard 
-                title="PRODUCT INFORMATION"
-              />
-            </div>
-            
-            <div className="services-list-container">
-              <ServicesList />
-            </div>
-          </div>
-        </div>
+        
 
         {/* Industries Section */}
-        <IndustriesCarousel industries={industries} />
+        <ServicesSection/>
         <IndustriesSection/>
         <ValuesAndVision />
         <Career />

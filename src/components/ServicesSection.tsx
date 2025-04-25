@@ -60,34 +60,39 @@ const ServicesSection = () => {
   const [activeTab, setActiveTab] = useState(services[0].id);
 
   return (
-    <section className="relative py-20">
-      {/* Background Image */}
+    <section className="relative py-20 overflow-hidden">
+      {/* Background Layers */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://sigmatechnology.com/content/uploads/2025/02/gr-1-1-1.webp"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-[#1c1c1c] opacity-90"></div>
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1c1c1c] via-[#2c2c2c] to-[#1c1c1c] opacity-80"></div>
+        
+        {/* Pattern/texture (optional) */}
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Title */}
-        <h2 className="text-4xl font-bold text-white mb-16">
-          <span className="text-red-600">Our</span> Services
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <span className="text-red-600">Our</span> Services
+          </h2>
+          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8">
           {/* Left Column - Tabs */}
           <div className="space-y-4">
             {services.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveTab(service.id)}
-                className={`w-full text-left p-6 rounded-lg transition-all duration-300 
+                className={`w-full text-left p-6 rounded-lg transition-all duration-300 border-l-4
                   ${activeTab === service.id 
-                    ? 'bg-red-600 text-white shadow-lg' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                    ? 'bg-red-600 text-white shadow-lg border-white' 
+                    : 'bg-white/5 text-white hover:bg-white/10 border-transparent'
                   }`}
               >
                 <h3 className="text-2xl font-semibold">{service.title}</h3>
@@ -96,26 +101,27 @@ const ServicesSection = () => {
           </div>
 
           {/* Right Column - Content */}
-          <div className="bg-white/10 rounded-lg p-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10 shadow-lg">
             {services.map((service) => (
               <div
                 key={service.id}
                 className={`transition-opacity duration-300 
                   ${activeTab === service.id ? 'block opacity-100' : 'hidden opacity-0'}`}
               >
-                <p className="text-white text-lg mb-8">{service.description}</p>
-                <ul className="space-y-4">
+                <p className="text-white/90 text-lg mb-8">{service.description}</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {service.items.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} className="flex items-center">
+                      <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-white hover:text-red-400 transition-colors"
+                          className="text-white hover:text-red-400 transition-colors text-lg"
                         >
                           {item.name}
                         </a>
                       ) : (
-                        <span className="text-white">{item.name}</span>
+                        <span className="text-white text-lg">{item.name}</span>
                       )}
                     </li>
                   ))}

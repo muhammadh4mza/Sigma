@@ -14,49 +14,49 @@ const ServicesHeroSection = () => {
     {
       id: 1,
       items: [
-        { text: 'Software development', link: 'https://sigmatechnology.com/service/software-development-services/' },
-        { text: 'Embedded systems development', link: 'https://sigmatechnology.com/service/embedded-systems-development/' },
-        { text: 'AI/ML consulting services', link: 'https://sigmatechnology.com/service/artificial-intelligence-ai-consulting-services' },
-        { text: 'Microsoft 365 Copilot', link: 'https://sigmatechnology.com/service/microsoft-365-copilot/' },
+        { text: 'Software development', link: '/service/software-development-services/' },
+        { text: 'Embedded systems development', link: '/service/embedded-systems-development/' },
+        { text: 'AI/ML consulting services', link: '/service/artificial-intelligence-ai-consulting-services' },
+        { text: 'Microsoft 365 Copilot', link: '/service/microsoft-365-copilot/' },
         { text: 'UX/UI design', link: null },
-        { text: 'Accessibility review', link: 'https://sigmatechnology.com/service/accessibility-review-sigma-technology-cloud/' },
-        { text: 'Digital strategy and transformation', link: 'https://sigmatechnology.com/service/digital-transformation-sigma-technology-cloud/' },
-        { text: 'IoT', link: 'https://sigmatechnology.com/service/internet-of-things-sigma-technology-cloud/' },
+        { text: 'Accessibility review', link: '/service/accessibility-review-sigma-technology-cloud/' },
+        { text: 'Digital strategy and transformation', link: '/service/digital-transformation-sigma-technology-cloud/' },
+        { text: 'IoT', link: '/service/internet-of-things-sigma-technology-cloud/' },
         { text: 'ERP solutions', link: null },
-        { text: 'Digital product passports', link: 'https://sigmatechnology.com/service/digital-product-passports/' },
-        { text: 'Public sector innovation', link: 'https://sigmatechnology.com/industry/public-sector-solutions-in-scandinavia/' },
-        { text: 'Automotive industry solutions', link: 'https://sigmatechnology.com/industry/automotive/' },
+        { text: 'Digital product passports', link: '/service/digital-product-passports/' },
+        { text: 'Public sector innovation', link: '/industry/public-sector-solutions-in-scandinavia/' },
+        { text: 'Automotive industry solutions', link: '/industry/automotive/' },
       ]
     },
     {
       id: 2,
       items: [
-        { text: 'Data analytics & BI', link: 'https://sigmatechnology.com/service/data-analytics-and-bi-services/' },
+        { text: 'Data analytics & BI', link: '/service/data-analytics-and-bi-services/' },
         { text: 'Predictive maintenance', link: null },
         { text: 'Digital twins', link: null },
-        { text: 'Corporate learning services', link: 'https://sigmatechnology.com/service/corporate-learning-services/' },
-        { text: 'Smartshoring', link: 'https://sigmatechnology.com/service/smartshoring/' },
-        { text: 'Learning and change management', link: 'https://sigmatechnology.com/service/learning-and-change-management/' },
-        { text: 'License management', link: 'https://sigmatechnology.com/service/license-management-services/' },
-        { text: 'ISO consulting', link: 'https://sigmatechnology.com/service/iso-consulting-services/' },
+        { text: 'Corporate learning services', link: '/service/corporate-learning-services/' },
+        { text: 'Smartshoring', link: '/service/smartshoring/' },
+        { text: 'Learning and change management', link: '/service/learning-and-change-management/' },
+        { text: 'License management', link: '/service/license-management-services/' },
+        { text: 'ISO consulting', link: '/service/iso-consulting-services/' },
       ]
     },
     {
       id: 3,
       items: [
-        { text: 'Cloud services', link: 'https://sigmatechnology.com/service/cloud-services/' },
-        { text: 'AWS cloud solutions', link: 'https://sigmatechnology.com/service/aws-cloud-services/' },
-        { text: 'Well-architected review', link: 'https://sigmatechnology.com/service/well-architected-review-consultancy/' },
-        { text: 'DevOps and infrastructure', link: 'https://sigmatechnology.com/service/devops-by-sigma-technology-cloud/' },
+        { text: 'Cloud services', link: '/service/cloud-services/' },
+        { text: 'AWS cloud solutions', link: '/service/aws-cloud-services/' },
+        { text: 'Well-architected review', link: '/service/well-architected-review-consultancy/' },
+        { text: 'DevOps and infrastructure', link: '/service/devops-by-sigma-technology-cloud/' },
       ]
     },
     {
       id: 4,
       items: [
-        { text: 'Product information', link: 'https://sigmatechnology.com/service/product-information-services/' },
-        { text: 'Product information management', link: 'https://sigmatechnology.com/service/information-management/' },
+        { text: 'Product information', link: '/service/product-information-services/' },
+        { text: 'Product information management', link: '/service/information-management/' },
         { text: 'Workshops & Training', link: null },
-        { text: 'Graphic design', link: 'https://sigmatechnology.com/service/design-services/' },
+        { text: 'Graphic design', link: '/service/design-services/' },
       ]
     },
   
@@ -86,7 +86,7 @@ return (
     
     <div className="container mx-auto px-4 relative z-10">
       {/* Content container with fixed height */}
-      <div className="bg-[#ffffff78] bg-opacity-50 rounded-xl p-8 backdrop-blur-sm shadow-2xl min-h-[600px]">
+      <div className="bg-[#ffffff24] bg-opacity-50 rounded-xl p-8 backdrop-blur-sm shadow-2xl min-h-[600px]">
         <h3 className="text-[64px] font-bold text-center mb-12 text-[#dc2626] uppercase">Our services</h3>
         
         <div className="services-content h-full">

@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedContent from "@/Animations/AnimatedContent/AnimatedContent";
 
 const HeroVideoSection = () => {
   return (
@@ -27,13 +28,28 @@ const HeroVideoSection = () => {
       </div>
 
       {/* Content Overlay */}
+      
+     
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-30">
         {/* Main Title - Centered both vertically and horizontally */}
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-[80px] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 uppercase">
-            Sigma Technology Group
-          </h1>
+        <AnimatedContent
+          distance={150}
+          direction="vertical"
+          reverse={false}
+          config={{ tension: 80, friction: 20 }}
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+        >
+        <div className="relative w-full h-[400px] flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold uppercase">
+              Sigma Technology Group
+            </h1>
+          </div>
         </div>
+
 
         {/* Counters Section - Hidden on tablets, shown on desktop */}
         <div className="hidden md:block container mx-auto px-4 mt-auto mb-16">
@@ -47,19 +63,20 @@ const HeroVideoSection = () => {
 
             {/* Counter Block 2 */}
             <div className="mb-4 md:mb-0">
-              <p className="text-sm md:text-base">leveraging</p>
-              <p className="text-3xl md:text-4xl font-bold my-2">20+ years</p>
-              <p className="text-xs md:text-sm">of global delivery<br />experience</p>
+              <p className="text-sm md:text-base">LEVERGING</p>
+              <p className="text-3xl md:text-4xl font-bold my-2 uppercase">20+ years</p>
+              <p className="text-xs md:text-sm uppercase">of global delivery<br />experience</p>
             </div>
 
             {/* Counter Block 3 */}
             <div className="mb-4 md:mb-0">
-              <p className="text-sm md:text-base">Operating</p>
-              <p className="text-3xl md:text-4xl font-bold my-2">30 locations</p>
-              <p className="text-xs md:text-sm">in 7 countries</p>
+              <p className="text-sm md:text-base">OPERATING</p>
+              <p className="text-3xl md:text-4xl font-bold my-2 uppercase">30 locations</p>
+              <p className="text-xs md:text-sm uppercase">in 7 countries</p>
             </div>
           </div>
         </div>
+        </AnimatedContent>
       </div>
     </section>
   );

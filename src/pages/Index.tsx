@@ -9,6 +9,7 @@ import IndustriesSection from "@/components/IndustriesSection";
 import ValuesAndVision from "@/components/ValuesAndVision";
 import Career from "@/components/career";
 import HexagonHeroSection from "@/components/HexagonHeroSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   
@@ -27,6 +28,7 @@ const Index = () => {
         <IndustriesSection />
         <ValuesAndVision />
         <Career />
+        <Footer />
       </main>
     </div>
   );

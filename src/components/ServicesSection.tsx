@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface ServiceItem {
   name: string;
@@ -57,87 +58,164 @@ const services: ServiceTab[] = [
 ];
 
 const ServicesSection = () => {
-              const [activeTab, setActiveTab] = useState(services[0].id);
-            
-              return (
-                <section className="relative py-20 overflow-hidden min-h-screen"> {/* Changed to min-h-screen */}
-                  {/* Background Layers */}
-                  <div className="absolute inset-0 z-0">
-                    {/* Background Image - Changed to proper implementation */}
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                      style={{ backgroundImage: "url('https://sigmatechnology.com/content/uploads/2025/02/gr-1-1-1.webp')" }}
-                    ></div>
-                    
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-gray-900 "></div>
-                    
-                    
-                    
-                    {/* Pattern/texture (optional) */}
-                    <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
-                  </div>
-            
-                  <div className="container mx-auto px-4 relative z-10 min-h-[70vh]"> {/* Added min-h */}
-                    {/* Title */}
-                    <div className="text-center mb-16">
-                      <h2 className="text-[64px] md:text-[64px] font-bold text-white mb-4 leading-tight uppercase">
-                        <span className="text-red-600">Our</span> Services
-                      </h2>
-                      <div className="w-[250px] h-1 bg-red-600 mx-auto"></div>
-                    </div>
-            
-                    <div className="grid lg:grid-cols-2 gap-8">
-                      {/* Left Column - Tabs */}
-                      <div className="space-y-4">
-                        {services.map((service) => (
-                          <button
-                            key={service.id}
-                            onClick={() => setActiveTab(service.id)}
-                            className={`w-full text-left p-6 rounded-lg transition-all duration-300 border-l-4
-                              ${activeTab === service.id 
-                                ? 'bg-red-600 text-white shadow-lg border-white' 
-                                : 'bg-white/5 text-white hover:bg-white/10 border-transparent'
-                              }`}
-                          >
-                            <h3 className="text-2xl font-semibold uppercase">{service.title}</h3>
-                          </button>
-                        ))}
-                      </div>
-            
-                      {/* Right Column - Content */}
-                      <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10 shadow-lg min-h-[500px]"> {/* Added min-h */}
-                        {services.map((service) => (
-                          <div
-                            key={service.id}
-                            className={`transition-opacity duration-300 h-full
-                              ${activeTab === service.id ? 'block opacity-100' : 'hidden opacity-0'}`}
-                          >
-                            <p className="text-white/90 text-[30px] mb-8 uppercase">{service.description}</p>
-                            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              {service.items.map((item, index) => (
-                                <li key={index} className="flex items-center">
-                                  <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
-                                  {item.link ? (
-                                    <a
-                                      href={item.link}
-                                      className="text-white hover:text-red-400 transition-colors text-lg"
-                                    >
-                                      {item.name}
-                                    </a>
-                                  ) : (
-                                    <span className="text-white text-lg">{item.name}</span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              );
-            };
-            
-            export default ServicesSection;
+  const [activeTab, setActiveTab] = useState(services[0].id);
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.8 } }
+  };
+
+  const slideUp = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  return (
+    <motion.section 
+      initial="hidden"
+      animate="show"
+      variants={fadeIn}
+      className="relative py-20 overflow-hidden min-h-screen"
+    >
+      {/* Background Layers */}
+      <div className="absolute inset-0 z-0">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('https://sigmatechnology.com/content/uploads/2025/02/gr-1-1-1.webp')" }}
+        ></motion.div>
+        
+        <div className="absolute inset-0 bg-gray-900"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10 min-h-[70vh]">
+        {/* Title */}
+        <motion.div 
+          variants={slideUp}
+          className="text-center mb-16"
+        >
+          <h2 className="text-[64px] md:text-[64px] font-bold text-white mb-4 leading-tight uppercase">
+            <span className="text-red-600">Our</span> Services
+          </h2>
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="w-[250px] h-1 bg-red-600 mx-auto origin-left"
+          ></motion.div>
+        </motion.div>
+
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="grid lg:grid-cols-2 gap-8"
+        >
+          {/* Left Column - Tabs */}
+          <motion.div variants={item} className="space-y-4">
+            {services.map((service) => (
+              <motion.button
+                key={service.id}
+                variants={item}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                onClick={() => setActiveTab(service.id)}
+                className={`w-full text-left p-6 rounded-lg transition-all duration-300 border-l-4
+                  ${activeTab === service.id 
+                    ? 'bg-red-600 text-white shadow-lg border-white' 
+                    : 'bg-white/5 text-white hover:bg-white/10 border-transparent'
+                  }`}
+              >
+                <h3 className="text-2xl font-semibold uppercase">{service.title}</h3>
+              </motion.button>
+            ))}
+          </motion.div>
+
+          {/* Right Column - Content */}
+          <motion.div 
+            variants={item}
+            className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10 shadow-lg min-h-[500px] overflow-hidden"
+          >
+            <AnimatePresence mode="wait">
+              {services.map((service) => (
+                activeTab === service.id && (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="h-full"
+                  >
+                    <motion.p 
+                      className="text-white/90 text-[30px] mb-8 uppercase"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      {service.description}
+                    </motion.p>
+                    <motion.ul 
+                      className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                      variants={container}
+                      initial="hidden"
+                      animate="show"
+                    >
+                      {service.items.map((item, index) => (
+                        <motion.li 
+                          key={index} 
+                          variants={item}
+                          whileHover={{ x: 5 }}
+                          className="flex items-center"
+                        >
+                          <motion.span 
+                            className="w-2 h-2 bg-red-600 rounded-full mr-3"
+                            animate={{
+                              scale: [1, 1.3, 1],
+                              transition: { delay: index * 0.05 }
+                            }}
+                          ></motion.span>
+                          {item.link ? (
+                            <a
+                              href={item.link}
+                              className="text-white hover:text-red-400 transition-colors text-lg"
+                            >
+                              {item.name}
+                            </a>
+                          ) : (
+                            <span className="text-white text-lg">{item.name}</span>
+                          )}
+                        </motion.li>
+                      ))}
+                    </motion.ul>
+                  </motion.div>
+                )
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+};
+
+export default ServicesSection;

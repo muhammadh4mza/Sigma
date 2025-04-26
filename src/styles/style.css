@@ -385,3 +385,53 @@
 .swiper-pagination-bullet-active {
   background: #dc2626;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes growWidth {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes countUp {
+  to { 
+    content: attr(data-count);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-float.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-growWidth {
+  animation: growWidth 1s ease-out forwards;
+}
+
+.animate-countUp {
+  animation: countUp 2s forwards;
+  counter-reset: num var(--num);
+}
+
+.animate-countUp::after {
+  content: counter(num);
+}

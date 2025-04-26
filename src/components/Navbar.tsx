@@ -37,9 +37,10 @@ const Header = () => {
               <div key={index} className="relative group">
                 <a 
                   href={item.link} 
-                  className="text-white hover:text-[#dc2626] transition-colors"
+                  className="text-white hover:text-[#dc2626] transition-colors duration-300 relative"
                 >
                   {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dc2626] transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
             ))}
@@ -65,10 +66,11 @@ const Header = () => {
                 <li key={index}>
                   <a 
                     href={item.link} 
-                    className="text-white hover:text-[#dc2626] block py-2"
+                    className="text-white hover:text-[#dc2626] block py-2 transition-colors duration-300 relative"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
+                    <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#dc2626] transition-all duration-300 hover:w-full"></span>
                   </a>
                 </li>
               ))}

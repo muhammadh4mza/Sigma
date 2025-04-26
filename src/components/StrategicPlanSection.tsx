@@ -82,8 +82,8 @@ const StrategicPlanSection = () => {
               className={`p-6 mb-4 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-1' ? 'border-l-4 border-red-600' : ''}`}
               onClick={() => setActiveTab('tab-item-1')}
               whileHover={{ 
-                scale: 1.02,
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+                // scale: 1.02,
+                boxShadow: '0 10px 15px -2px #dc26265c'
               }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, x: -20 }}
@@ -97,8 +97,8 @@ const StrategicPlanSection = () => {
               className={`p-6 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-2' ? 'border-l-4 border-red-600' : ''}`}
               onClick={() => setActiveTab('tab-item-2')}
               whileHover={{ 
-                scale: 1.02,
-                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
+                // scale: 1.02,
+                boxShadow: '0 10px 15px -3px #dc26265c'
               }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, x: -20 }}

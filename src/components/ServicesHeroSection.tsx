@@ -106,7 +106,7 @@ return (
             
             <div className="flex justify-between items-center mb-8">
               <div className="text-white border-b border-gray-200 text-[35px]">
-                <span className="service-count">{activeTab}/</span>04
+                <span className="service-count">{activeTab}/</span>4
               </div>
               <div className="flex">
                 <button 

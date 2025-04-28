@@ -73,7 +73,7 @@ const TextWithVideo = () => {
 
             {/* Mobile Description */}
             <div className="mt-8 md:hidden space-y-4 text-gray-700">
-              <p><strong className="font-bold">Decades of experience</strong>.</p>
+              <p><strong className="font-bold capitalize">Decades of experience</strong>.</p>
               <p>
                 Sigma Technology Group is a privately-owned technology consulting company operating in Sweden, Hungary, China, Norway, Germany, Kosovo and Ukraine. We offer an ideal combination of cross-industry expertise, a sustainability-first approach to development, and a partnership-oriented business. We focus on delivering software development, product information, embedded systems design & development, digital solutions, and IT infrastructure with expert consultants, development teams, and offshore delivery.
               </p>

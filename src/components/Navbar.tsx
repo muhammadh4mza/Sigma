@@ -8,8 +8,8 @@ const Header = () => {
   const menuItems = [
     { name: 'About', link: '/about' },
     { name: 'Services', link: '/services' },
-    { name: 'Career', link: '/career' },
-    { name: 'Insights', link: '/insights-library' },
+    { name: 'Careers', link: '/careers' },
+    { name: 'Insight', link: '/insight' },
     { name: 'Contact', link: '/contact' },
     { name: 'Languages', link: '/languages' },
   ];

@@ -27,17 +27,17 @@ const HexagonHeroSection = () => {
           {/* Left Column - Image Section */}
           <div className="w-full lg:w-5/12">
             {/* Desktop Image */}
-            <div className="hidden lg:block w-full h-full rounded-xl overflow-hidden shadow-lg">
+            <div className="hidden lg:block w-full h-full  overflow-hidden ">
               <img 
                 src={HexagonImage} 
-                className="w-full h-auto max-h-[600px] object-cover"
+                className="w-full h-auto max-h-[600px] object-contain"
                 alt="hexagon-background"
                 loading="lazy"
               />
             </div>
             
             {/* Mobile Image */}
-            <div className="lg:hidden w-full h-full rounded-xl overflow-hidden shadow-md">
+            <div className="lg:hidden w-full h-full  overflow-hidden ">
               <img 
                 src={About1} 
                 className="w-full h-auto max-h-[400px] object-cover"

@@ -435,3 +435,11 @@
 .animate-countUp::after {
   content: counter(num);
 }
+
+.tabs-swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1;
+}
+.tabs-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #dc2626;
+}

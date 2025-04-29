@@ -48,13 +48,13 @@ const FlexibleInsights = () => {
   return (
     <section className="flexible-insights text-center relative py-20 bg-gray-50">
       {/* Triangle background */}
-      <div className="trianglebg absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-50 to-transparent clip-path-triangle z-0"></div>
+      <div className="trianglebg absolute top-0 left-0 w-full h-full bg-gradient-to-b from-red-100 to-transparent clip-path-triangle z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="row">
           <div className="col-lg-12 w-full">
-            <h3 className="title text-3xl md:text-4xl font-bold mb-4">insights</h3>
-            <p className="subtitle text-xl mb-12">Meet our people</p>
+            <h3 className="title text-3xl md:text-4xl lg:text-7xl font-bold mb-4 uppercase">insights</h3>
+            <p className="subtitle text-xl mb-12 uppercase">Meet our people</p>
             
             <div className="slinsight relative">
               <Swiper
@@ -104,7 +104,7 @@ const FlexibleInsights = () => {
                             <div className="text btslide text-gray-700 mb-6">{member.cta}</div>
                             <a 
                               href={member.buttonLink} 
-                              className="button inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors"
+                              className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300"
                             >
                               {member.buttonText}
                             </a>
@@ -117,16 +117,16 @@ const FlexibleInsights = () => {
               </Swiper>
 
               {/* Navigation Controls */}
-              <div className="swiper-button-prev tabs-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* <div className="swiper-button-prev tabs-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" >
+                  <path d="M15 18L9 12L15 6"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <div className="swiper-button-next tabs-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer hover:bg-gray-100 transition-colors">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6"  strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </div>
+              </div> */}
               
               <div className="tabs-swiper-pagination swiper-pagination mt-6 !relative"></div>
             </div>
@@ -134,11 +134,11 @@ const FlexibleInsights = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .clip-path-triangle {
           clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
         }
-      `}</style>
+      `}</style> */}
     </section>
   );
 };

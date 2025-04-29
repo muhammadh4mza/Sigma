@@ -42,9 +42,9 @@ const HeroVideoSection = () => {
             threshold={0.2}
           >
             <div className="container mx-auto px-4 text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-7xl font-bold uppercase mb-4 leading-tight">
-                <span className="inline-block animate-float">Sigma</span>{' '}
-                <span className="inline-block animate-float delay-100">Technology</span>{' '}
+              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-9xl font-bold uppercase mb-4 leading-tight">
+                <span className="inline-block animate-float">Sigma</span>{' '}<br></br>
+                <span className="inline-block animate-float delay-100">Technology</span>{' '}<br></br>
                 <span className="inline-block animate-float delay-200">Group</span>
               </h1>
               <div className="w-32 h-1 bg-[#dc2626] mx-auto mt-8 animate-growWidth origin-left"></div>

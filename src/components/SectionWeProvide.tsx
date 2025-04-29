@@ -32,7 +32,7 @@ const SectionWeProvide = () => {
       tab: "Talent development & superior employment",
       image: "https://sigmatechnology.com/content/uploads/2022/05/EDS_IndustryWest_GBG_2880px_sRGB-7-scaled-1.jpeg?x25367",
       title: "We help develop your true extraordinary",
-      content: "Making employment a superior experience is our continuous focus and top priority. We are proud that our people voted us to become Top 3 Sweden's Best Employer three years in a row. This aligns with our ambition to become a leading technology consulting company where our people are in focus."
+      content: "Making employment a superior experience is our continuous focus and top priority. We are proud that our people voted us to become Top 3 Sweden’s Best Employer three years in a row. This aligns with our ambition to become a leading technology consulting company where our people are in focus. To help our talents grow, we regularly conduct activities and invest in education to develop and enrich their expertise. Training, coaching, professional workshops, conferences, summits, internal learning are available for our experts."
     },
     {
       tab: "Caring leaders",
@@ -74,7 +74,7 @@ const SectionWeProvide = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h3 className="text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-12">
+        <h3 className="text-3xl md:text-4xl lg:text-7xl font-bold text-center mb-12 uppercase">
           What does it mean to be a part of Sigma Technology?
         </h3>
 

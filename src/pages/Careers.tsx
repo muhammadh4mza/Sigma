@@ -5,7 +5,9 @@ import HeroWithAwards from "@/components/HeroWithAwards";
 import FlexibleAccordion from "@/components/FlexibleAccordion";
 import SectionWeProvide from "@/components/SectionWeProvide";
 import FlexibleInsights from "@/components/FlexibleInsights";
-const Career = () => {
+import EducationTabs from "@/components/EducationTabs";
+import VideoSlider from "@/components/VideoSlider";
+const Careers = () => {
   
 
   return (
@@ -15,6 +17,8 @@ const Career = () => {
       <FlexibleAccordion />
       <SectionWeProvide />
       <FlexibleInsights />
+      <EducationTabs />
+      <VideoSlider />
 
 
 
@@ -24,4 +28,4 @@ const Career = () => {
   );
 };
 
-export default Career;    
+export default Careers;    

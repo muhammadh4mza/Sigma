@@ -26,7 +26,7 @@ const FlexibleAccordion = () => {
         <div className="row flex flex-col md:flex-row">
           {/* Left Column - Content */}
           <div className="col-md-5 col-xs-12 w-full md:w-5/12 mb-8 md:mb-0 md:pr-8">
-            <h3 className="title text-7xl font-bold mb-4 capitalize">Focus on people</h3>
+            <h3 className="title text-7xl font-bold mb-4 uppercase">Focus on people</h3>
             <p className="subtitle text-lg mb-8 font-medium">
               Enjoy working in a respectful environment where your personality, talent, and curiosity come first.
             </p>

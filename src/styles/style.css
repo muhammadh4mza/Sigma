@@ -443,3 +443,29 @@
 .tabs-swiper-pagination .swiper-pagination-bullet-active {
   background-color: #dc2626;
 }
+
+.swiper-button-next:after{
+  content: '→';
+  font-size: 20px;
+  color: #fa0303;
+}
+.swiper-button-prev:after{
+  content: '←';
+  font-size: 20px;
+  color: #fa0303;
+}
+
+.clip-path-triangle {
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+/* Custom pagination styles */
+.tabs-swiper-pagination .swiper-pagination-bullet {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.tabs-swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #dc2626; /* blue-500 */
+  opacity: 1;
+}
+

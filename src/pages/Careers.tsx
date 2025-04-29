@@ -7,6 +7,8 @@ import SectionWeProvide from "@/components/SectionWeProvide";
 import FlexibleInsights from "@/components/FlexibleInsights";
 import EducationTabs from "@/components/EducationTabs";
 import VideoSlider from "@/components/VideoSlider";
+import TimelineSection from "@/components/TimelineSection";
+import JobListings from "@/components/JobListings";
 const Careers = () => {
   
 
@@ -19,6 +21,9 @@ const Careers = () => {
       <FlexibleInsights />
       <EducationTabs />
       <VideoSlider />
+      <TimelineSection />
+      <JobListings />
+
 
 
 

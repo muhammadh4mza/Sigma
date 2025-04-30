@@ -81,7 +81,7 @@ const CTA = () => {
           </motion.p>
           
           <motion.a 
-            href="https://sigmatechnology.com/open-positions/" 
+            href="/open-positions/" 
             className="inline-block bg-[#dc2626] text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-[#dc2626] transition-colors duration-300"
             variants={buttonVariants}
             whileHover="hover"

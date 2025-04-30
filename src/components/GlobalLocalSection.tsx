@@ -156,7 +156,7 @@ const GlobalLocalSection = () => {
                 transition={{ delay: 0.6 }}
               >
                 <motion.a 
-                  href="https://sigmatechnology.com/contact/" 
+                  href="/contact/" 
                   className="inline-flex items-center px-10 py-5 bg-white text-[#dc2626] font-bold text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

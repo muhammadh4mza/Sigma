@@ -112,7 +112,7 @@ const VideoSlider = () => {
             </p>
             
             <a 
-              href="https://sigmatechnology.com/open-positions/" 
+              href="/open-positions/" 
               className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 "
             >
               Join us!

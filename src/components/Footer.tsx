@@ -50,7 +50,7 @@ const Footer = () => {
                 <li><a href="/career/" className="text-gray-300 hover:text-white">Career</a></li>
                 <li><a href="/media/" className="text-gray-300 hover:text-white">Media resources</a></li>
                 <li><a href="/content/uploads/2024/04/Code-of-Conduct-and-Business-Ethics-1.pdf?x25367" className="text-gray-300 hover:text-white">Code of conduct</a></li>
-                <li><a href="https://sigmatechnology.com/about/privacy-policy/" className="text-gray-300 hover:text-white">Privacy policy</a></li>
+                <li><a href="/about/privacy-policy/" className="text-gray-300 hover:text-white">Privacy policy</a></li>
               </ul>
             </div>
           </div>

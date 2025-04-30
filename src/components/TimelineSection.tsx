@@ -92,7 +92,7 @@ const TimelineSection = () => {
     <section className="relative py-16 bg-red-100" id="dottimeline">
       {/* Download button */}
       <a 
-        href="https://sigmatechnology.com/content/uploads/2022/08/Sigma-Technology-Sustainability-Report-2021.pdf" 
+        href="/content/uploads/2022/08/Sigma-Technology-Sustainability-Report-2021.pdf" 
         className="absolute right-4 z-10"
         download
       >
@@ -144,7 +144,7 @@ const TimelineSection = () => {
                       <img src={item.image} alt={item.title} className="w-full h-auto rounded-lg mb-6 object-cover max-h-[300px]" />
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-5xl font-bold mb-2 text-white text-center">{item.title}</h3>
+                      <h3 className="text-xl lg:text-4xl font-bold mb-2 text-white text-center uppercase">{item.title}</h3>
                       <p className="text-white text-center">{item.description}</p>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ const TimelineSection = () => {
           </ul>
         </div>
 
-        <p className="text-center lg:text-2xl mt-16 max-w-3xl mx-auto uppercase font-bold text-gray-700">
+        <p className="text-center lg:text-3xl mt-16 max-w-3xl mx-auto uppercase font-bold text-gray-700">
           We try not to stay away from human grief and inside our big team we share a sense of compassion, conducting charity events within the company.
         </p>
       </div>

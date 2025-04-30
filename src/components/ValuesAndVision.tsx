@@ -69,7 +69,7 @@ const sections: Section[] = [
     content: 'Our CSR report provides an overview of our company\'s efforts and progress towards sustainable practices and social responsibility. Through this report, we aim to transparently communicate our commitments and actions towards creating a positive impact on society and the environment.',
     isReport: true,
     reportLink: 'https://sigmatechnology.com/content/uploads/2025/02/CSR-Report-2023-final-version.pdf',
-    bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-4.webp',
+    bgImage: 'https://sigmatechnology.com/content/uploads/2022/05/03.png?x25367',
     sideImage: value4,
     contentRight: true
   }
@@ -157,12 +157,12 @@ const ValuesAndVision = () => {
               <motion.img
                 src={section.bgImage}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               />
-              <div className="absolute inset-0 bg-[#e9e9e9]" />
+              <div className="absolute inset-0 bg-[#9e9e9e]" />
             </div>
 
             {/* Content */}
@@ -206,7 +206,7 @@ const ValuesAndVision = () => {
                   <motion.img
                     src={section.sideImage}
                     alt=""
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 1 }}

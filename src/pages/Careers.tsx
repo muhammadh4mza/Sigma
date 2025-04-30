@@ -9,6 +9,8 @@ import EducationTabs from "@/components/EducationTabs";
 import VideoSlider from "@/components/VideoSlider";
 import TimelineSection from "@/components/TimelineSection";
 import JobListings from "@/components/JobListings";
+import PassionSlider from "@/components/PassionSlider";
+import CTA from "../components/CTA";
 const Careers = () => {
   
 
@@ -23,6 +25,8 @@ const Careers = () => {
       <VideoSlider />
       <TimelineSection />
       <JobListings />
+      <PassionSlider />
+      <CTA />
 
 
 

@@ -125,8 +125,10 @@ const JobListings = () => {
   });
 
   return (
-    <section className="bg-[#f5f5f5] py-24">
+    <section className="relative  bg-[#e3e6ed] ">
+      <div className=" relative py-32 bg-[url('https://sigmatechnology.com/content/themes/sigma/img/job-post-profiler-bg.svg')] bg-cover bg-center h-auto  ">
       <div className="container mx-auto px-4">
+        
         <h3 className="text-3xl lg:text-7xl font-bold text-center mb-6">OPEN POSITIONS</h3>
         <p className="text-center max-w-3xl mx-auto mb-12">
           Being a part of Sigma Technology family means being what and who you want to be. Fusioning your skills, 
@@ -243,7 +245,7 @@ const JobListings = () => {
               <a href={job.link} className="block h-full group">
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col transition-shadow duration-300 group-hover:shadow-lg">
                   <div className="p-6 flex-grow">
-                    <h2 className="text-xl font-bold mb-4">{job.title}</h2>
+                    <h2 className="text-xl lg:text-2xl font-bold mb-4 uppercase">{job.title}</h2>
                     
                     {job.deadline && (
                       <div className="flex items-center mb-4">
@@ -269,7 +271,7 @@ const JobListings = () => {
 
                     <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: job.description }} />
                   </div>
-                  <div className="bg-gray-100 h-1 w-full"></div>
+                  {/* <div className="bg-gray-100 h-1 w-full"></div> */}
                 </div>
               </a>
             </div>
@@ -308,6 +310,8 @@ const JobListings = () => {
             </button>
           </div>
         )}
+        
+      </div>
       </div>
     </section>
   );

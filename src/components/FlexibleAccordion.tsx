@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Imagecareer from '../src/assets/Careers/careers.jpeg'
-// import HexagonImage from '../assets/careers/careers.jpg';
+import HexagonImage from '../assets/careers/careers.jpg';
 
 const FlexibleAccordion = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);

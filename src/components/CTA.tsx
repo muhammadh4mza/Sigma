@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CTA = () => {
+const CTASection = () => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,4 +94,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default CTASection;

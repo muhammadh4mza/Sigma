@@ -33,7 +33,7 @@ const VideoSlider = () => {
   };
 
   return (
-    <section className="relative py-16 text-center bg-gray-50 py-28">
+    <section className="relative py-28 text-center bg-gray-50 ">
       {/* Triangle background */}
       <div className="absolute top-0 left-0 w-full h-16 bg-white clip-path-triangle"></div>
       

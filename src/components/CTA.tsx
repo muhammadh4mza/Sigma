@@ -82,7 +82,7 @@ const CTASection = () => {
           
           <motion.a 
             href="/open-positions/" 
-            className="inline-block bg-[#dc2626] text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-[#dc2626] transition-colors duration-300"
+            className="inline-block bg-[#086AD7] text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-[#086AD7] transition-colors duration-300"
             variants={buttonVariants}
             whileHover="hover"
           >

@@ -177,7 +177,7 @@ interface WaveUniforms {
   mouseRadius: THREE.Uniform<number>;
 }
 
-interface DitheredWavesProps {
+interface DitheblueWavesProps {
   waveSpeed: number;
   waveFrequency: number;
   waveAmplitude: number;
@@ -189,7 +189,7 @@ interface DitheredWavesProps {
   mouseRadius: number;
 }
 
-function DitheredWaves({
+function DitheblueWaves({
   waveSpeed,
   waveFrequency,
   waveAmplitude,
@@ -199,7 +199,7 @@ function DitheredWaves({
   disableAnimation,
   enableMouseInteraction,
   mouseRadius,
-}: DitheredWavesProps) {
+}: DitheblueWavesProps) {
   const mesh = useRef<THREE.Mesh>(null);
   const effect = useRef<RetroEffectImpl>(null);
   const [mousePos, setMousePos] = useState<{ x: number; y: number }>({
@@ -324,7 +324,7 @@ export default function Dither({
       dpr={window.devicePixelRatio}
       gl={{ antialias: true, preserveDrawingBuffer: true }}
     >
-      <DitheredWaves
+      <DitheblueWaves
         waveSpeed={waveSpeed}
         waveFrequency={waveFrequency}
         waveAmplitude={waveAmplitude}

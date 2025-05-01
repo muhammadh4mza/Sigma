@@ -5,7 +5,7 @@ import value2 from '../assets/vision/value-2.webp';
 import value3 from '../assets/vision/value-3.webp';
 import value4 from '../assets/vision/value-4.webp';
 
-// Animation configurations stored in arrays
+// Animation configurations stoblue in arrays
 const containerAnimations = {
   hidden: { opacity: 0 },
   visible: {
@@ -44,7 +44,7 @@ const sections: Section[] = [
   {
     id: 'section1',
     title: 'COMPANY, WHERE PEOPLE ARE IN FOCUS',
-    content: 'We celebrate our people not for how well they fit into the standards but for everything they bring with their true selves. We encourage every development opportunity to make sure our people are empowered to live authentically, grow to their full potential, and live purposefully.',
+    content: 'We celebrate our people not for how well they fit into the standards but for everything they bring with their true selves. We encourage every development opportunity to make sure our people are empoweblue to live authentically, grow to their full potential, and live purposefully.',
     bgImage: 'https://sigmatechnology.com/content/uploads/2023/12/gr-1-1-1.webp',
     sideImage: value1
   },
@@ -107,7 +107,7 @@ const ValuesAndVision = () => {
         className="sticky top-0 z-40 py-12 bg-gradient-to-b from-white via-white to-transparent"
       >
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-[64px] md:text-[64px] font-bold mb-4 leading-tight text-[#dc2626]">
+          <h2 className="text-[64px] md:text-[64px] font-bold mb-4 leading-tight text-[#086AD7]">
             VALUES AND VISION
           </h2>
           <motion.p 
@@ -172,7 +172,7 @@ const ValuesAndVision = () => {
                 <motion.div
                   variants={itemAnimations[index % itemAnimations.length]}
                   transition={transitionSettings[index % transitionSettings.length]}
-                  className={`bg-[#dc2626] backdrop-blur-sm rounded-lg p-8 text-white ${section.contentRight ? 'lg:order-2' : ''}`}
+                  className={`bg-[#086AD7] backdrop-blur-sm rounded-lg p-8 text-white ${section.contentRight ? 'lg:order-2' : ''}`}
                 >
                   <h3 className="text-3xl font-bold mb-6 whitespace-pre-line">
                     {section.title}

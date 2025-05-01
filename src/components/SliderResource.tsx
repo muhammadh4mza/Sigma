@@ -9,7 +9,7 @@ const SliderResource = () => {
       id: 0,
       category: "Press Release",
       title: "Sigma Technology Group Ranks Among Sweden's Top 3 Best Employers in 2024",
-      description: "Sigma Technology Group has been featured among Sweden's Best Employers for twelve years in a row. In 2024, the company secured the third place.",
+      description: "Sigma Technology Group has been featublue among Sweden's Best Employers for twelve years in a row. In 2024, the company secublue the third place.",
       tags: [],
       link: "https://sigmatechnology.com/pressrelease/sigma-technology-group-ranks-among-swedens-top-3-best-employers-in-2024/",
       desktopImage: "https://sigmatechnology.com/content/uploads/2023/11/Hero-for-IL-2-scaled.webp?x25367",
@@ -65,6 +65,30 @@ const SliderResource = () => {
 
   return (
     <section className="relative slider-resource overflow-hidden h-[809px]">
+      {/* Background images container - positioned behind content */}
+      <div className="absolute inset-0 h-full w-full z-0">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <img
+              src={slide.desktopImage}
+              alt={slide.title}
+              className="hidden md:block w-full h-full object-cover"
+            />
+            <img
+              src={slide.mobileImage}
+              alt={slide.title}
+              className="md:hidden w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Overlay to darken the background */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
       {/* Previous button */}
       <button 
         className="sigma-previous slick-arrow absolute left-0 top-1/2 z-[1000] -translate-y-1/2 h-12 w-12 bg-transparent border-none cursor-pointer"
@@ -76,86 +100,47 @@ const SliderResource = () => {
         </svg>
       </button>
 
-      {/* Slides container */}
-      <div className="slick-list h-full overflow-hidden">
-        <div 
-          className="slick-track flex h-full relative"
-          style={{
-            width: `${slides.length * 100}%`,
-            transform: `translateX(-${activeIndex * (100 / slides.length)}%)`,
-            transition: isTransitioning ? 'transform 500ms ease' : 'none'
-          }}
-        >
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`slick-slide h-full float-left ${index === activeIndex ? 'slick-current slick-active' : ''}`}
-              style={{ width: `${100 / slides.length}%` }}
-              role="tabpanel"
-              aria-hidden={index !== activeIndex}
-              tabIndex={index === activeIndex ? 0 : -1}
-            >
-              <div className="item h-full w-full">
-                <div className="covered-bg h-full relative">
-                  {/* Background images */}
-                  <div className="bg-cover absolute inset-0 h-full w-full">
-                    <img
-                      src={slide.desktopImage}
-                      alt={slide.title}
-                      className="background absolute inset-0 h-full w-full object-cover hidden md:block"
-                    />
-                    <img
-                      src={slide.mobileImage}
-                      alt={slide.title}
-                      className="background absolute inset-0 h-full w-full object-cover md:hidden"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="container h-full mx-auto px-4">
-                    <div className="row h-full flex items-center">
-                      <div className="col-lg-8 w-full lg:w-8/12">
-                        <div className="hero-content heigtset h-full flex flex-col justify-center text-white">
-                          <p className="category-slider text-lg mb-2">{slide.category}</p>
-                          <a 
-                            href={slide.link} 
-                            className="sl-link block mb-4 no-underline hover:no-underline"
-                            tabIndex={index === activeIndex ? 0 : -1}
-                          >
-                            <h2 className="title text-4xl font-bold mb-4">{slide.title}</h2>
-                          </a>
-                          
-                          {slide.tags.length > 0 && (
-                            <ul className="slider-tag flex gap-2 mb-4">
-                              {slide.tags.map((tag, i) => (
-                                <li key={i} className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
-                                  {tag}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                          
-                          <p className="description-slide text-lg mb-6">{slide.description}</p>
-                          
-                          <a 
-                            href={slide.link} 
-                            className="slider-link inline-flex items-center text-white no-underline hover:no-underline"
-                            tabIndex={index === activeIndex ? 0 : -1}
-                          >
-                            Read more
-                            <svg className="readsvg ml-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                              <path fillRule="evenodd" clipRule="evenodd" d="M29.3085 16.6383L23.207 27.2065C22.9789 27.6015 22.5575 27.8449 22.1013 27.8448L9.89827 27.8448C9.44226 27.8448 9.0209 27.6015 8.79288 27.2065L2.69132 16.6383C2.46326 16.2433 2.46326 15.7566 2.69133 15.3617L8.79284 4.79343C9.02092 4.39851 9.44235 4.15526 9.89839 4.15531L22.1015 4.15513C22.5575 4.15517 22.9789 4.39847 23.2069 4.79339L29.3087 15.3617C29.5367 15.7567 29.5367 16.2433 29.3087 16.6383L29.3085 16.6383Z" fill="#FF0000" stroke="#FF0000" strokeWidth="1.2"/>
-                              <path d="M14.8535 12.3892L15.6333 11.6614L19.7063 16.0253L15.6333 20.3892L14.8535 19.6614L18.247 16.0253L14.8535 12.3892Z" fill="white"/>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      {/* Content container */}
+      <div className="relative z-20 h-full flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="row">
+            <div className="col-lg-8 w-full lg:w-8/12">
+              <div className="hero-content text-white">
+                <p className="category-slider text-lg mb-2">{slides[activeIndex].category}</p>
+                <a 
+                  href={slides[activeIndex].link} 
+                  className="sl-link block mb-4 no-underline hover:no-underline"
+                  tabIndex={0}
+                >
+                  <h2 className="title text-4xl font-bold mb-4">{slides[activeIndex].title}</h2>
+                </a>
+                
+                {slides[activeIndex].tags.length > 0 && (
+                  <ul className="slider-tag flex gap-2 mb-4">
+                    {slides[activeIndex].tags.map((tag, i) => (
+                      <li key={i} className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                <p className="description-slide text-lg mb-6">{slides[activeIndex].description}</p>
+                
+                <a 
+                  href={slides[activeIndex].link} 
+                  className="slider-link inline-flex items-center text-white no-underline hover:no-underline"
+                  tabIndex={0}
+                >
+                  Read more
+                  <svg className="readsvg ml-2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M29.3085 16.6383L23.207 27.2065C22.9789 27.6015 22.5575 27.8449 22.1013 27.8448L9.89827 27.8448C9.44226 27.8448 9.0209 27.6015 8.79288 27.2065L2.69132 16.6383C2.46326 16.2433 2.46326 15.7566 2.69133 15.3617L8.79284 4.79343C9.02092 4.39851 9.44235 4.15526 9.89839 4.15531L22.1015 4.15513C22.5575 4.15517 22.9789 4.39847 23.2069 4.79339L29.3087 15.3617C29.5367 15.7567 29.5367 16.2433 29.3087 16.6383L29.3085 16.6383Z" fill="#086AD7" stroke="#086AD7" strokeWidth="1.2"/>
+                    <path d="M14.8535 12.3892L15.6333 11.6614L19.7063 16.0253L15.6333 20.3892L14.8535 19.6614L18.247 16.0253L14.8535 12.3892Z" fill="white"/>
+                  </svg>
+                </a>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
@@ -171,7 +156,7 @@ const SliderResource = () => {
       </button>
 
       {/* Dots navigation */}
-      <ul className="slick-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2" role="tablist">
+      <ul className="slick-dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-[1000]" role="tablist">
         {slides.map((slide, index) => (
           <li 
             key={slide.id} 
@@ -185,12 +170,10 @@ const SliderResource = () => {
               aria-controls={`slick-slide0${index}`}
               aria-label={`${index + 1} of ${slides.length}`}
               aria-selected={index === activeIndex}
-              className="w-3 h-3 rounded-full bg-white bg-opacity-50 border-none cursor-pointer p-0"
+              className={`w-3 h-3 rounded-full border-none cursor-pointer p-0 ${index === activeIndex ? 'bg-white' : 'bg-white bg-opacity-50'}`}
               onClick={() => goToSlide(index)}
-              tabIndex={index === activeIndex ? 0 : -1}
-            >
-              {index + 1}
-            </button>
+              tabIndex={0}
+            />
           </li>
         ))}
       </ul>

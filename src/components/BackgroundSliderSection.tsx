@@ -96,8 +96,8 @@ const BackgroundSliderSection = () => {
                       onClick={() => setActiveSlide(slide.id)}
                       className={`hex-bt relative px-6 py-3 text-sm md:text-base font-medium transition-all duration-300 h-[150px] ${
                         activeSlide === slide.id 
-                          ? 'bg-[#dc2626] text-white ' 
-                          : 'bg-white/20 text-white hover:bg-[#dc2626]'
+                          ? 'bg-[#086AD7] text-white ' 
+                          : 'bg-white/20 text-white hover:bg-[#086AD7]'
                       }`}
                       style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                     >
@@ -108,7 +108,7 @@ const BackgroundSliderSection = () => {
 
                 <motion.a
                   href="/services/"
-                  className="button inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-medium hover:bg-[#dc2626] hover:text-white transition-colors duration-300"
+                  className="button inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-medium hover:bg-[#086AD7] hover:text-white transition-colors duration-300"
               //     whileHover={{ scale: 1.05 }}
               //     whileTap={{ scale: 0.95 }}
                 >

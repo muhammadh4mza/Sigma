@@ -89,7 +89,7 @@ const TimelineSection = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-red-100" id="dottimeline">
+    <section className="relative py-16 bg-blue-100" id="dottimeline">
       {/* Download button */}
       <a 
         href="/content/uploads/2022/08/Sigma-Technology-Sustainability-Report-2021.pdf" 
@@ -137,7 +137,7 @@ const TimelineSection = () => {
                 id={item.id}
                 className={`relative pl-8 pr-8 ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'} max-w-lg`}
               >
-                <div className="bg-red-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                <div className="bg-blue-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
                   <div className="flex flex-col md:flex-clo gap-6">
                     <div className="flex-shrink-0">
                       <img src={item.logo} alt={item.title} className="h-16 object-contain justify-center" />
@@ -156,7 +156,7 @@ const TimelineSection = () => {
                 </div>
                 
                 {/* Point on timeline */}
-                <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-red-500 ${index % 2 === 0 ? '-left-10' : '-right-10'}`}></div>
+                <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 ${index % 2 === 0 ? '-left-10' : '-right-10'}`}></div>
               </li>
             ))}
           </ul>

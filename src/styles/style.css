@@ -38,7 +38,7 @@
 /* WhatsNew Component Styles */
 .whats-new-section {
               padding: 4rem 1rem;
-              background-color: #f0e5e8;
+              background-color: #E6F0FB;
             }
             
             .whats-new-container {
@@ -90,7 +90,7 @@
             
             .nav-button {
               padding: 0.5rem;
-              border: 1px solid #8e0f0c;
+              border: 1px solid #086AD7;
               border-radius: 9999px;
               transition: background-color 0.3s;
             }
@@ -102,9 +102,9 @@
             .read-more-button {
               display: inline-flex;
               align-items: center;
-              color: #8e0f0c;
+              color: #086AD7;
               font-weight: 500;
-              border: 1px solid #8e0f0c;
+              border: 1px solid #086AD7;
               padding: 0.5rem 1rem;
               border-radius: 0.25rem;
               transition: all 0.3s;
@@ -244,7 +244,7 @@
 }
 
 .service-item:hover {
-  color: #8e0f0c;
+  color: #086AD7;
 }
 
 /* Industries Carousel Styles */
@@ -275,7 +275,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #dc2626;
+  background-color: #086AD7;
   color: white;
   border: none;
   transition: all 0.3s ease;
@@ -383,7 +383,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: #dc2626;
+  background: #086AD7;
 }
 
 @keyframes fadeIn {
@@ -441,7 +441,7 @@
   opacity: 1;
 }
 .tabs-swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #dc2626;
+  background-color: #086AD7;
 }
 
 .swiper-button-next:after{
@@ -465,7 +465,7 @@
 }
 
 .tabs-swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #dc2626; /* blue-500 */
+  background-color: #086AD7; /* blue-500 */
   opacity: 1;
 }
 

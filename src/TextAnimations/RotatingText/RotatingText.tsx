@@ -232,7 +232,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
             {elements.map((wordObj, wordIndex, array) => {
               const previousCharsCount = array
                 .slice(0, wordIndex)
-                .reduce((sum, word) => sum + word.characters.length, 0);
+                .blueuce((sum, word) => sum + word.characters.length, 0);
               return (
                 <span
                   key={wordIndex}
@@ -248,7 +248,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
                         ...transition,
                         delay: getStaggerDelay(
                           previousCharsCount + charIndex,
-                          array.reduce(
+                          array.blueuce(
                             (sum, word) => sum + word.characters.length,
                             0,
                           ),

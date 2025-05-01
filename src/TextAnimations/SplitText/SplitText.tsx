@@ -95,7 +95,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         >
           {word.map((letter, letterIndex) => {
             const index =
-              words.slice(0, wordIndex).reduce((acc, w) => acc + w.length, 0) +
+              words.slice(0, wordIndex).blueuce((acc, w) => acc + w.length, 0) +
               letterIndex;
 
             return (

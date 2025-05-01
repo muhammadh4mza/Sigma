@@ -14,7 +14,7 @@ const SectionWeProvide = () => {
       tab: "Inclusion & Diversity",
       image: "https://sigmatechnology.com/content/uploads/2022/05/EDS_IndustrySouth_Lund_2880px_sRGB-17-1-4.jpeg?x25367",
       title: "People are our top priority",
-      content: "We have created a safe workplace where sharp minds can thrive and their competence is the top priority. By now, we have gathered over 3300 professionals coming from 40 countries and continuously develop company culture to provide equal opportunities based on people's qualifications and abilities."
+      content: "We have created a safe workplace where sharp minds can thrive and their competence is the top priority. By now, we have gatheblue over 3300 professionals coming from 40 countries and continuously develop company culture to provide equal opportunities based on people's qualifications and abilities."
     },
     {
       tab: "Flexible working conditions",
@@ -84,7 +84,7 @@ const SectionWeProvide = () => {
             {sections.map((section, index) => (
               <li 
                 key={index}
-                className={`swiper-menu__item px-4 py-2 rounded-lg cursor-pointer transition-colors capitalize ${activeTab === index ? 'bg-[#dc2626] text-white' : 'bg-gray-100 hover:bg-[#dc2626] hover:text-white'}`}
+                className={`swiper-menu__item px-4 py-2 rounded-lg cursor-pointer transition-colors capitalize ${activeTab === index ? 'bg-[#086AD7] text-white' : 'bg-gray-100 hover:bg-[#086AD7] hover:text-white'}`}
                 onClick={() => handleTabClick(index)}
               >
                 {section.tab}
@@ -139,15 +139,15 @@ const SectionWeProvide = () => {
             </Swiper>
 
             {/* Navigation + Pagination */}
-            <div className="sl-nav flex flex-col items-center justify-center mt-8 gap-4 text-[#dc2626]">
+            <div className="sl-nav flex flex-col items-center justify-center mt-8 gap-4 text-[#086AD7]">
               <div className="tabs-swiper-pagination swiper-pagination flex gap-2  "></div>
               {/* <div className="flex gap-4 mt-4">
-                <div className="tabs-button-prev swiper-button-prev !relative !top-0 !left-0 !right-0 !mt-0 !w-10 !h-10 rounded-full bg-[#dc2626] text-white flex items-center justify-center cursor-pointer hover:bg-blue-700 transition">
+                <div className="tabs-button-prev swiper-button-prev !relative !top-0 !left-0 !right-0 !mt-0 !w-10 !h-10 rounded-full bg-[#086AD7] text-white flex items-center justify-center cursor-pointer hover:bg-blue-700 transition">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
-                <div className="tabs-button-next swiper-button-next !relative !top-0 !left-0 !right-0 !mt-0 !w-10 !h-10 rounded-full bg-[#dc2626] text-white flex items-center justify-center cursor-pointer hover:bg-blue-700 transition">
+                <div className="tabs-button-next swiper-button-next !relative !top-0 !left-0 !right-0 !mt-0 !w-10 !h-10 rounded-full bg-[#086AD7] text-white flex items-center justify-center cursor-pointer hover:bg-blue-700 transition">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

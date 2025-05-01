@@ -66,7 +66,7 @@ const HeroSectionAbout = () => {
                 <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
                   <motion.a
                     href="/career/"
-                    className="button bg-[#dc2626] hover:bg-[white] text-white hover:text-[#dc2626] px-8 py-4 rounded-lg font-medium transition-colors duration-300 text-lg capitalize"
+                    className="button bg-[#086AD7] hover:bg-[white] text-white hover:text-[#086AD7] px-8 py-4 rounded-lg font-medium transition-colors duration-300 text-lg capitalize"
               //       whileHover={{ scale: 1.05 }}
               //       whileTap={{ scale: 0.95 }}
                   >

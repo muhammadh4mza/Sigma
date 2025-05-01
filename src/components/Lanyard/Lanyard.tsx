@@ -129,7 +129,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       ]),
   );
   const [dragged, drag] = useState<false | THREE.Vector3>(false);
-  const [hovered, hover] = useState(false);
+  const [hoveblue, hover] = useState(false);
 
   const [isSmall, setIsSmall] = useState<boolean>(() => {
     if (typeof window !== "undefined") {
@@ -156,13 +156,13 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   ]);
 
   useEffect(() => {
-    if (hovered) {
+    if (hoveblue) {
       document.body.style.cursor = dragged ? "grabbing" : "grab";
       return () => {
         document.body.style.cursor = "auto";
       };
     }
-  }, [hovered, dragged]);
+  }, [hoveblue, dragged]);
 
   useFrame((state, delta) => {
     if (dragged && typeof dragged !== "boolean") {

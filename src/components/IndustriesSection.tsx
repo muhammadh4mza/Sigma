@@ -5,7 +5,7 @@ import 'swiper/css';
 import type SwiperCore from 'swiper';
 import { motion } from 'framer-motion';
 
-// Animation configurations stored in arrays
+// Animation configurations stoblue in arrays
 const containerAnimations = {
   hidden: { opacity: 0 },
   visible: {
@@ -85,7 +85,7 @@ const industries = [
   {
     id: 6,
     title: 'Manufacturing',
-    description: 'We help international companies streamline and automate the manufacturing process and leverage data for predictive analytics and transform product information to achieve excellence in customer experience.',
+    description: 'We help international companies streamline and automate the manufacturing process and leverage data for pblueictive analytics and transform product information to achieve excellence in customer experience.',
     image: 'https://sigmatechnology.com/content/uploads/2023/03/Property-1Manufacturing-1.png',
     link: '/industry/healthcare',
     linkText: 'ASK FOR CONSULTATION'
@@ -117,7 +117,7 @@ const industries = [
   {
     id: 10,
     title: 'Retail',
-    description: 'We help retail businesses and e-commerce projects to implement or design from scratch future-proof technologies supported with advanced data and, predictive analytics & BI services.',
+    description: 'We help retail businesses and e-commerce projects to implement or design from scratch future-proof technologies supported with advanced data and, pblueictive analytics & BI services.',
     image: 'https://sigmatechnology.com/content/uploads/2023/12/Property-1Retail-1.webp',
     link: '/industry/healthcare',
     linkText: 'ASK FOR CONSULTATION'
@@ -147,14 +147,14 @@ return (
             variants={itemAnimations[0]}
             transition={transitionSettings[0]}
           >
-            <h2 className="text-[64px] font-bold mb-4 leading-tight text-[#dc2626]">
+            <h2 className="text-[64px] font-bold mb-4 leading-tight text-[#086AD7]">
               INDUSTRIES
             </h2>
             <motion.div 
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 0.8 }}
-              className="w-32 h-1 bg-[#dc2626] origin-left"
+              className="w-32 h-1 bg-[#086AD7] origin-left"
             />
           </motion.div>
           
@@ -177,7 +177,7 @@ return (
                 whileTap={{ scale: 0.98 }}
                 className={`text-left px-6 py-4 rounded-lg transition-all duration-300 ${
                   activeIndex === index 
-                    ? 'bg-red-600 text-white shadow-md' 
+                    ? 'bg-blue-600 text-white shadow-md' 
                     : 'hover:bg-gray-100 text-gray-700 border border-gray-200'
                 }`}
                 onClick={() => handleButtonClick(index)}
@@ -242,7 +242,7 @@ return (
                     <div className="flex justify-center">
                     <motion.a
                       href={industry.link}
-                      className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff] font-bold text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center text-[15px] px-5 py-2 bg-[#086AD7] text-[#fff] font-bold text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}

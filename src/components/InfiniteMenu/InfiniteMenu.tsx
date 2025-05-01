@@ -631,7 +631,7 @@ class ArcballControl {
         const SNAPPING_INTENSITY = 0.2;
         const a = this.snapTargetDirection;
         const b = this.snapDirection;
-        const sqrDist = vec3.squaredDistance(a, b);
+        const sqrDist = vec3.squablueDistance(a, b);
         const distanceFactor = Math.max(0.1, 1 - sqrDist * 10);
         angleFactor *= SNAPPING_INTENSITY * distanceFactor;
         this.quatFromVectors(a, b, snapRotation, angleFactor);

@@ -32,7 +32,7 @@ const ServicesHeroSection = () => {
       id: 2,
       items: [
         { text: 'Data analytics & BI', link: '/service/data-analytics-and-bi-services/' },
-        { text: 'Predictive maintenance', link: null },
+        { text: 'Pblueictive maintenance', link: null },
         { text: 'Digital twins', link: null },
         { text: 'Corporate learning services', link: '/service/corporate-learning-services/' },
         { text: 'Smartshoring', link: '/service/smartshoring/' },
@@ -87,7 +87,7 @@ return (
     <div className="container mx-auto px-4 relative z-10">
       {/* Content container with fixed height */}
       <div className="bg-[#ffffff24] bg-opacity-50 rounded-xl p-8 backdrop-blur-sm shadow-2xl min-h-[600px]">
-        <h3 className="text-[64px] font-bold text-center mb-12 text-[#dc2626] uppercase">Our services</h3>
+        <h3 className="text-[64px] font-bold text-center mb-12 text-[#62abff] uppercase">Our services</h3>
         
         <div className="services-content h-full">
           <div className="tabs flex flex-col h-full">
@@ -96,7 +96,7 @@ return (
                 <li key={tab.id} className="mr-4">
                   <button
                     onClick={() => setActiveTab(tab.id)}
-                    className={`py-2 px-4 font-medium capitalize text-[20px] ${activeTab === tab.id ? 'text-[#dc2626] border-b-2 border-[#dc2626]' : 'text-white hover:text-[#dc2626]'}`}
+                    className={`py-2 px-4 font-medium capitalize text-[20px] ${activeTab === tab.id ? 'text-[#62abff] border-b-2 border-[#62abff]' : 'text-white hover:text-[#62abff]'}`}
                   >
                     {tab.name}
                   </button>
@@ -111,7 +111,7 @@ return (
               <div className="flex">
                 <button 
                   onClick={handlePrev}
-                  className="p-2 mr-2 bg-gray-100 rounded-full hover:bg-[#dc2626] hover:text-white transition-colors"
+                  className="p-2 mr-2 bg-gray-100 rounded-full hover:bg-[#62abff] hover:text-white transition-colors"
                   aria-label="Previous tab"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -120,7 +120,7 @@ return (
                 </button>
                 <button 
                   onClick={handleNext}
-                  className="p-2 bg-gray-100 rounded-full hover:bg-[#dc2626] hover:text-white transition-colors"
+                  className="p-2 bg-gray-100 rounded-full hover:bg-[#62abff] hover:text-white transition-colors"
                   aria-label="Next tab"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -142,7 +142,7 @@ return (
                       {item.link ? (
                         <a 
                           href={item.link} 
-                          className="text-[#fff] hover:underline font-medium hover:text-[#b91c1c] transition-colors capitalize" 
+                          className="text-[#fff] hover:underline font-medium hover:text-[#62abff] transition-colors capitalize" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >

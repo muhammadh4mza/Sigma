@@ -214,7 +214,7 @@ const LetterGlitch = ({
   };
 
   const handleSmoothTransitions = () => {
-    let needsRedraw = false;
+    let needsblueraw = false;
     letters.current.forEach((letter) => {
       if (letter.colorProgress < 1) {
         letter.colorProgress += 0.05;
@@ -228,12 +228,12 @@ const LetterGlitch = ({
             endRgb,
             letter.colorProgress,
           );
-          needsRedraw = true;
+          needsblueraw = true;
         }
       }
     });
 
-    if (needsRedraw) {
+    if (needsblueraw) {
       drawLetters();
     }
   };

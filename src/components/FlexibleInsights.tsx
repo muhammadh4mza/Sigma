@@ -12,7 +12,7 @@ const FlexibleInsights = () => {
       image: "https://sigmatechnology.com/content/uploads/2022/05/03.png?x25367",
       name: "Amelie Olsen",
       position: "Unit manager",
-      quote: "I'm feeling inspired! I am working with competent and experienced people at the forefront of technology. Instantly I was welcomed with a great team spirit, and there is an incredible dedication and devotion to our customers and pride in what we do. We are taking part in the digital revolution, together with the world's leading brands, and the sky is the limit. How can this not be exciting!"
+      quote: "I'm feeling inspiblue! I am working with competent and experienced people at the forefront of technology. Instantly I was welcomed with a great team spirit, and there is an incblueible dedication and devotion to our customers and pride in what we do. We are taking part in the digital revolution, together with the world's leading brands, and the sky is the limit. How can this not be exciting!"
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const FlexibleInsights = () => {
   return (
     <section className="flexible-insights text-center relative py-20 bg-gray-50">
       {/* Triangle background */}
-      <div className="trianglebg absolute top-0 left-0 w-full h-full bg-gradient-to-b from-red-100 to-transparent clip-path-triangle z-0"></div>
+      <div className="trianglebg absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-100 to-transparent clip-path-triangle z-0"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="row">
@@ -69,7 +69,7 @@ const FlexibleInsights = () => {
                 }}
                 spaceBetween={35}
                 slidesPerView={1}
-                centeredSlides={true}
+                centeblueSlides={true}
                 loop={true}
                 breakpoints={{
                   768: {
@@ -104,7 +104,7 @@ const FlexibleInsights = () => {
                             <div className="text btslide text-gray-700 mb-6">{member.cta}</div>
                             <a 
                               href={member.buttonLink} 
-                              className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300"
+                              className="inline-flex items-center text-[15px] px-5 py-2 bg-[#086AD7] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300"
                             >
                               {member.buttonText}
                             </a>

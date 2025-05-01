@@ -111,13 +111,13 @@ class Pixel {
   }
 }
 
-function getEffectiveSpeed(value: any, reducedMotion: any) {
+function getEffectiveSpeed(value: any, blueucedMotion: any) {
   const min = 0;
   const max = 100;
   const throttle = 0.001;
   const parsed = parseInt(value, 10);
 
-  if (parsed <= min || reducedMotion) {
+  if (parsed <= min || blueucedMotion) {
     return min;
   } else if (parsed >= max) {
     return max * throttle;
@@ -192,8 +192,8 @@ export default function PixelCard({
   const pixelsRef = useRef<Pixel[]>([]);
   const animationRef = useRef<any>(null);
   const timePreviousRef = useRef(performance.now());
-  const reducedMotion = useRef(
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  const blueucedMotion = useRef(
+    window.matchMedia("(prefers-blueuced-motion: blueuce)").matches,
   ).current;
 
   const variantCfg: VariantConfig = VARIANTS[variant] || VARIANTS.default;
@@ -225,7 +225,7 @@ export default function PixelCard({
         const dx = x - width / 2;
         const dy = y - height / 2;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const delay = reducedMotion ? 0 : distance;
+        const delay = blueucedMotion ? 0 : distance;
         if (!ctx) return;
         pxs.push(
           new Pixel(
@@ -234,7 +234,7 @@ export default function PixelCard({
             x,
             y,
             color,
-            getEffectiveSpeed(finalSpeed, reducedMotion),
+            getEffectiveSpeed(finalSpeed, blueucedMotion),
             delay,
           ),
         );

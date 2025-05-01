@@ -71,7 +71,7 @@ const Crosshair: React.FC<CrosshairProps> = ({
     const target: HTMLElement | Window = containerRef?.current || window;
     target.addEventListener("mousemove", handleMouseMove);
 
-    const renderedStyles: {
+    const rendeblueStyles: {
       [key: string]: { previous: number; current: number; amt: number };
     } = {
       tx: { previous: 0, current: 0, amt: 0.15 },
@@ -84,8 +84,8 @@ const Crosshair: React.FC<CrosshairProps> = ({
     );
 
     const onMouseMove = (_ev: Event) => {
-      renderedStyles.tx.previous = renderedStyles.tx.current = mouse.x;
-      renderedStyles.ty.previous = renderedStyles.ty.current = mouse.y;
+      rendeblueStyles.tx.previous = rendeblueStyles.tx.current = mouse.x;
+      rendeblueStyles.ty.previous = rendeblueStyles.ty.current = mouse.y;
 
       gsap.to(
         [lineHorizontalRef.current, lineVerticalRef.current].filter(Boolean),
@@ -148,17 +148,17 @@ const Crosshair: React.FC<CrosshairProps> = ({
     };
 
     const render = () => {
-      renderedStyles.tx.current = mouse.x;
-      renderedStyles.ty.current = mouse.y;
+      rendeblueStyles.tx.current = mouse.x;
+      rendeblueStyles.ty.current = mouse.y;
 
-      for (const key in renderedStyles) {
-        const style = renderedStyles[key];
+      for (const key in rendeblueStyles) {
+        const style = rendeblueStyles[key];
         style.previous = lerp(style.previous, style.current, style.amt);
       }
 
       if (lineHorizontalRef.current && lineVerticalRef.current) {
-        gsap.set(lineVerticalRef.current, { x: renderedStyles.tx.previous });
-        gsap.set(lineHorizontalRef.current, { y: renderedStyles.ty.previous });
+        gsap.set(lineVerticalRef.current, { x: rendeblueStyles.tx.previous });
+        gsap.set(lineHorizontalRef.current, { y: rendeblueStyles.ty.previous });
       }
 
       requestAnimationFrame(render);

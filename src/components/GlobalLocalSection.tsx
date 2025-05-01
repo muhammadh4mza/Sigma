@@ -60,7 +60,7 @@ const GlobalLocalSection = () => {
             variants={containerVariants}
           >
             <motion.h3 
-              className="text-[64px] font-bold mb-8 text-left text-[#dc2626] leading-none"
+              className="text-[64px] font-bold mb-8 text-left text-[#086AD7] leading-none"
               variants={itemVariants}
             >
               GLOBAL YET LOCAL
@@ -81,7 +81,7 @@ const GlobalLocalSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Image Background with Red Overlay */}
+          {/* Right Column - Image Background with blue Overlay */}
           <motion.div 
             className="w-full lg:w-7/12 rounded-xl text-white relative min-h-[600px]"
             initial={{ opacity: 0, x: 50 }}
@@ -89,10 +89,10 @@ const GlobalLocalSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Background Image with Red Overlay */}
+            {/* Background Image with blue Overlay */}
             <div className="absolute inset-0 overflow-hidden rounded-xl">
               <img
-                src="https://sigmatechnology.com/content/themes/sigma/assets/img/value2.svg"
+                src="https://sigmatechnology.com/content/themes/sigma/assets/img/mainhexa.svg"
                 alt="Global offices"
                 className="w-full h-full object-contain"
               />
@@ -157,7 +157,7 @@ const GlobalLocalSection = () => {
               >
                 <motion.a 
                   href="/contact/" 
-                  className="inline-flex items-center px-10 py-5 bg-white text-[#dc2626] font-bold text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-10 py-5 bg-white text-[#086AD7] font-medium text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 transform hover:scale-105"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

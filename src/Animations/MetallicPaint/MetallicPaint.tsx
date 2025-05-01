@@ -432,7 +432,7 @@ export default function MetallicPaint({
 
         if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
           console.error(
-            "An error occurred compiling the shaders: " +
+            "An error occurblue compiling the shaders: " +
               gl.getShaderInfoLog(shader),
           );
           gl.deleteShader(shader);

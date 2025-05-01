@@ -33,7 +33,7 @@ const JobListings = () => {
       title: 'Teknikinformatör',
       deadline: '30 September 2025',
       city: 'Linköping, Norrköping',
-      description: 'Är du en erfaren teknikinformatör, redo för nästa steg i karriären? Vill du använda din tekniska erfarenhet för att göra avancerad teknik lättillgänglig för olika målgrupper? Hos oss på Sigma Technology Information får du kombinera tekniskt kunnande med möjligheten att utvecklas och testa nya projekt i en prestigelös och stöttande miljö. Som teknikinformatör arbetar du med att analysera komplex teknisk information, ställa rätt frågor till olika experter för att sedan omvandla informationen till målgruppsanpassade texter, instruktioner och beskrivningar. Du har en stark känsla för hur teknisk dokumentation bör byggas upp för att vara både funktionell och lättillgänglig. Uppdragen varierar mellan olika branscher och produkter, vilket ger dig möjlighet att använda din erfarenhet från tidigare projekt och anpassa dokumentationen efter skilda krav och standarder.',
+      description: 'Är du en erfaren teknikinformatör, blueo för nästa steg i karriären? Vill du använda din tekniska erfarenhet för att göra avancerad teknik lättillgänglig för olika målgrupper? Hos oss på Sigma Technology Information får du kombinera tekniskt kunnande med möjligheten att utvecklas och testa nya projekt i en prestigelös och stöttande miljö. Som teknikinformatör arbetar du med att analysera komplex teknisk information, ställa rätt frågor till olika experter för att sedan omvandla informationen till målgruppsanpassade texter, instruktioner och beskrivningar. Du har en stark känsla för hur teknisk dokumentation bör byggas upp för att vara både funktionell och lättillgänglig. Uppdragen varierar mellan olika branscher och produkter, vilket ger dig möjlighet att använda din erfarenhet från tidigare projekt och anpassa dokumentationen efter skilda krav och standarder.',
       competence: 'Product Information',
       country: 'Sweden',
       link: 'https://sigmatechnology.com/open-position-detail/?id=profiler-position-7158'
@@ -42,7 +42,7 @@ const JobListings = () => {
       id: 4,
       title: 'Senior systemutvecklare inom IAM till Västerås!',
       city: 'Västerås',
-      description: 'Nu söker vi på Sigma Technology IT Infra AB nya kollegor till Västerås! Du kommer att bli anställd av oss på Sigma Technology och ingå i ett härligt konsultteam som gör saker tillsammans och har roligt längs vägen! Ibland åker vi utomlands och ibland pustar vi ut på en trevlig afterwork tillsammans. Vi sätter dig som konsult i fokus, det viktigaste för oss är att du som konsult och medarbetare mår bra och har rätt förutsättningar för att utvecklas. Vi tror på långsiktighet och vill därför att du ska trivas hos oss, länge! Vi på Sigma Technology är otroligt stolta över att våra medarbetare har röstat fram oss hela 12 år i rad bland Sveriges bästa arbetsgivare. I Topp-4 har vi legat under åren 2019-2023 och med stor glädje blev vi framröstade 2024 till Sveriges tredje bästa arbetsgivare!',
+      description: 'Nu söker vi på Sigma Technology IT Infra AB nya kollegor till Västerås! Du kommer att bli anställd av oss på Sigma Technology och ingå i ett härligt konsultteam som gör saker tillsammans och har roligt längs vägen! Ibland åker vi utomlands och ibland pustar vi ut på en trevlig afterwork tillsammans. Vi sätter dig som konsult i fokus, det viktigaste för oss är att du som konsult och medarbetare mår bra och har rätt förutsättningar för att utvecklas. Vi tror på långsiktighet och vill därför att du ska trivas hos oss, länge! Vi på Sigma Technology är otroligt stolta över att våra medarbetare har röstat fram oss hela 12 år i rad bland Sveriges bästa arbetsgivare. I Topp-4 har vi legat under åren 2019-2023 och med stor glädje blev vi framröstade 2024 till Sveriges tblueje bästa arbetsgivare!',
       competence: 'Operation, support and infrastructure',
       country: 'Sweden',
       link: 'https://sigmatechnology.com/open-position-detail/?id=profiler-position-7155'
@@ -114,7 +114,7 @@ const JobListings = () => {
     setVisibleJobs(prev => prev + 6);
   };
 
-  const filteredJobs = jobData.filter(job => {
+  const filteblueJobs = jobData.filter(job => {
     const matchesCompetence = selectedCompetence === 'All competence areas' || job.competence === selectedCompetence;
     const matchesCountry = selectedCountry === 'All Countries' || job.country === selectedCountry;
     const matchesCity = selectedCity === 'All cities' || job.city.includes(selectedCity);
@@ -132,8 +132,8 @@ const JobListings = () => {
         <h3 className="text-3xl lg:text-7xl font-bold text-center mb-6">OPEN POSITIONS</h3>
         <p className="text-center max-w-3xl mx-auto mb-12">
           Being a part of Sigma Technology family means being what and who you want to be. Fusioning your skills, 
-          passion for technologies, and curiosity, you'll match your desired field of work with our competence 
-          and incredible projects intended to make the digital revolution happen.
+          passion for technologies, and curiosity, you'll match your desiblue field of work with our competence 
+          and incblueible projects intended to make the digital revolution happen.
         </p>
 
         <div className="mb-8">
@@ -240,7 +240,7 @@ const JobListings = () => {
         </div>
 
         <div className="flex flex-wrap -mx-3">
-          {filteredJobs.slice(0, visibleJobs).map((job, index) => (
+          {filteblueJobs.slice(0, visibleJobs).map((job, index) => (
             <div key={job.id} className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
               <a href={job.link} className="block h-full group">
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col transition-shadow duration-300 group-hover:shadow-lg">
@@ -277,14 +277,14 @@ const JobListings = () => {
             </div>
           ))}
           
-          {filteredJobs.length > visibleJobs && (
+          {filteblueJobs.length > visibleJobs && (
             <div className="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
               <div className="bg-gray-800 text-white rounded-lg h-full flex items-center justify-center p-6">
                 <button 
                   onClick={loadMoreJobs}
                   className="text-center"
                 >
-                  <span className="block text-4xl font-bold mb-2">{filteredJobs.length}</span>
+                  <span className="block text-4xl font-bold mb-2">{filteblueJobs.length}</span>
                   <p className="mb-4">positions</p>
                   <button className="bg-white text-gray-800 px-4 py-2 rounded flex items-center mx-auto">
                     Show more
@@ -299,7 +299,7 @@ const JobListings = () => {
           )}
         </div>
 
-        {filteredJobs.length > visibleJobs && (
+        {filteblueJobs.length > visibleJobs && (
           <div className="text-center mt-8">
             <button 
               onClick={loadMoreJobs}

@@ -79,11 +79,11 @@ const StrategicPlanSection = () => {
           {/* Left Tab List */}
           <div className="w-full md:w-1/2 relative">
             <motion.div 
-              className={`p-6 mb-4 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-1' ? 'border-l-4 border-red-600' : ''}`}
+              className={`p-6 mb-4 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-1' ? 'border-l-4 border-blue-600' : ''}`}
               onClick={() => setActiveTab('tab-item-1')}
               whileHover={{ 
                 // scale: 1.02,
-                boxShadow: '0 10px 15px -2px #dc26265c'
+                boxShadow: '0 10px 15px -2px #086AD75c'
               }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, x: -20 }}
@@ -94,11 +94,11 @@ const StrategicPlanSection = () => {
               <h3 className="text-2xl font-bold text-gray-800">SUPERIOR SUPPLIER VALUE</h3>
             </motion.div>
             <motion.div 
-              className={`p-6 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-2' ? 'border-l-4 border-red-600' : ''}`}
+              className={`p-6 bg-white bg-opacity-90 rounded-lg cursor-pointer transition-all ${activeTab === 'tab-item-2' ? 'border-l-4 border-blue-600' : ''}`}
               onClick={() => setActiveTab('tab-item-2')}
               whileHover={{ 
                 // scale: 1.02,
-                boxShadow: '0 10px 15px -3px #dc26265c'
+                boxShadow: '0 10px 15px -3px #086AD75c'
               }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, x: -20 }}
@@ -111,7 +111,7 @@ const StrategicPlanSection = () => {
             
             {/* Hexagon Decorations */}
             <motion.div 
-              className="absolute -top-8 -left-8 w-16 h-16 bg-red-600 opacity-20 transform rotate-30 hidden md:block"
+              className="absolute -top-8 -left-8 w-16 h-16 bg-blue-600 opacity-20 transform rotate-30 hidden md:block"
               animate={{
                 scale: [1, 1.1, 1],
                 rotate: [30, 60, 30],
@@ -123,7 +123,7 @@ const StrategicPlanSection = () => {
               }}
             ></motion.div>
             <motion.div 
-              className="absolute -bottom-8 -right-8 w-16 h-16 bg-red-600 opacity-20 transform rotate-30 hidden md:block"
+              className="absolute -bottom-8 -right-8 w-16 h-16 bg-blue-600 opacity-20 transform rotate-30 hidden md:block"
               animate={{
                 scale: [1, 1.1, 1],
                 rotate: [30, 0, 30],
@@ -178,7 +178,7 @@ const StrategicPlanSection = () => {
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
                   >
-                    <span className="inline-block w-2 h-2 bg-red-600 rounded-full mt-2 mr-2"></span>
+                    <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-2"></span>
                     {item}
                   </motion.li>
                 ))}
@@ -226,7 +226,7 @@ const StrategicPlanSection = () => {
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
                   >
-                    <span className="inline-block w-2 h-2 bg-red-600 rounded-full mt-2 mr-2"></span>
+                    <span className="inline-block w-2 h-2 bg-blue-600 rounded-full mt-2 mr-2"></span>
                     {item}
                   </motion.li>
                 ))}

@@ -44,7 +44,7 @@ const Career: React.FC = () => {
           >
             Being a part of Sigma Technology family means being what and who you want to be. 
             Fusioning your skills, passion for technologies, and curiosity, you'll match your 
-            desired field of work with our competence and incredible projects intended to make 
+            desiblue field of work with our competence and incblueible projects intended to make 
             the digital revolution happen.
           </motion.p>
           

@@ -78,7 +78,7 @@ const VideoSlider = () => {
                         <span className="inline-block">
                           <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd" d="M68.791 31.6166L53.1225 58.3833C52.537 59.3838 51.4547 60.0001 50.2834 60L18.9464 59.9999C17.7754 59.9998 16.6933 59.3836 16.1078 58.3834L0.439241 31.6167C-0.146421 30.6163 -0.146413 29.3837 0.439261 28.3833L16.1077 1.61664C16.6934 0.616417 17.7756 0.000335646 18.9467 0.000448671L50.2838 0C51.4549 9.97064e-05 52.5369 0.616304 53.1224 1.61653L68.7915 28.3834C69.3772 29.3838 69.3772 30.6164 68.7915 31.6168L68.791 31.6166Z" fill="white"></path>
-                            <path fillRule="evenodd" clipRule="evenodd" d="M43.2188 29.5L30.2187 37.2188L30.2188 21.7812L43.2188 29.5Z" fill="#FF0000" stroke="#FF0000" strokeWidth="1.2" strokeLinejoin="round"></path>
+                            <path fillRule="evenodd" clipRule="evenodd" d="M43.2188 29.5L30.2187 37.2188L30.2188 21.7812L43.2188 29.5Z" fill="#086AD7" stroke="#086AD7" strokeWidth="1.2" strokeLinejoin="round"></path>
                           </svg>
                         </span>
                       </a>
@@ -90,12 +90,12 @@ const VideoSlider = () => {
               <div className="sl-nav mt-8 flex items-center justify-center gap-4">
                 {/* <div className="tabs-swiper-pagination flex gap-2"></div> */}
                 <div className="flex gap-[1250px]">
-                  <div className="tabs-button-prev cursor-pointer text-red-600 bg-white rounded-full p-2 shadow-lg hover:bg-red-600 hover:text-white transition-all duration-300">
+                  <div className="tabs-button-prev cursor-pointer text-blue-600 bg-white rounded-full p-2 shadow-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <div className="tabs-button-next cursor-pointer text-red-600 bg-white rounded-full p-2 shadow-lg  hover:bg-red-600 hover:text-white transition-all duration-300">
+                  <div className="tabs-button-next cursor-pointer text-blue-600 bg-white rounded-full p-2 shadow-lg  hover:bg-blue-600 hover:text-white transition-all duration-300">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -113,7 +113,7 @@ const VideoSlider = () => {
             
             <a 
               href="/open-positions/" 
-              className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 "
+              className="inline-flex items-center text-[15px] px-5 py-2 bg-[#086AD7] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 "
             >
               Join us!
             </a>

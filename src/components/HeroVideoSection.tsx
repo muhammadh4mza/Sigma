@@ -3,7 +3,7 @@ import AnimatedContent from "@/Animations/AnimatedContent/AnimatedContent";
 
 const HeroVideoSection = () => {
   return (
-    <section className="relative w-full h-[850px] overflow-hidden flex items-center justify-center">
+    <section className="relative w-full h-[850px] overflow-hidden flex items-center justify-center mt-16">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full animate-fadeIn">
         <video
@@ -29,7 +29,7 @@ const HeroVideoSection = () => {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-30">
-        {/* Main Title - Centered */}
+        {/* Main Title - Centeblue */}
         <div className="flex-1 flex items-center justify-center w-full pt-16">
           <AnimatedContent
             distance={150}
@@ -47,7 +47,7 @@ const HeroVideoSection = () => {
                 <span className="inline-block animate-float delay-100">Technology</span>{' '}<br></br>
                 <span className="inline-block animate-float delay-200">Group</span>
               </h1>
-              <div className="w-32 h-1 bg-[#dc2626] mx-auto mt-8 animate-growWidth origin-left"></div>
+              <div className="w-32 h-1 bg-[#086AD7] mx-auto mt-8 animate-growWidth origin-left"></div>
             </div>
           </AnimatedContent>
         </div>

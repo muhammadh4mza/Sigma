@@ -83,7 +83,7 @@ const PassionSlider = () => {
                   <div className="flex flex-col md:flex-row items-center justify-center gap-8">
                     {/* Left area - quote */}
                     <div className="md:w-1/3 text-right">
-                      <p className="text-2xl lg:text-3xl font-bold mb-4 uppercase text-[#dc2626]">{testimonial.quote}</p>
+                      <p className="text-2xl lg:text-3xl font-bold mb-4 uppercase text-[#086AD7]">{testimonial.quote}</p>
                       <p className="text-lg">{testimonial.text}</p>
                     </div>
 
@@ -102,14 +102,14 @@ const PassionSlider = () => {
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" width="61" height="54" viewBox="0 0 61 54" fill="none">
                           <path fillRule="evenodd" clipRule="evenodd" d="M60.1173 28.3436L46.4245 51.7353C45.9127 52.6096 44.9669 53.1482 43.9433 53.1482L16.5575 53.1481C15.5341 53.148 14.5885 52.6095 14.0768 51.7354L0.383858 28.3436C-0.127959 27.4693 -0.127952 26.3922 0.383876 25.5179L14.0767 2.12618C14.5886 1.25207 15.5343 0.713672 16.5578 0.713771L43.9437 0.713379C44.9671 0.713466 45.9127 1.25197 46.4244 2.12609L60.1178 25.518C60.6296 26.3923 60.6296 27.4694 60.1178 28.3437L60.1173 28.3436Z" fill="white"></path>
-                          <path fillRule="evenodd" clipRule="evenodd" d="M37.7695 26.4941L26.4087 33.2396V19.7485L37.7695 26.4941Z" fill="#FF0000" stroke="#FF0000" strokeWidth="1.2" strokeLinejoin="round"></path>
+                          <path fillRule="evenodd" clipRule="evenodd" d="M37.7695 26.4941L26.4087 33.2396V19.7485L37.7695 26.4941Z" fill="#086AD7" stroke="#086AD7" strokeWidth="1.2" strokeLinejoin="round"></path>
                         </svg>
                       </button>
                     </div>
 
                     {/* Right area - name and position */}
                     <div className="md:w-1/3 text-left">
-                      <p className="text-2xl lg:text-3xl font-bold mb-4 uppercase text-[#dc2626]">{testimonial.name}</p>
+                      <p className="text-2xl lg:text-3xl font-bold mb-4 uppercase text-[#086AD7]">{testimonial.name}</p>
                       <p className="text-lg">{testimonial.position}</p>
                     </div>
                   </div>
@@ -136,7 +136,7 @@ const PassionSlider = () => {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full ${activeSlide === index ? 'bg-[#dc2626]' : 'bg-gray-300'}`}
+                  className={`w-3 h-3 rounded-full ${activeSlide === index ? 'bg-[#086AD7]' : 'bg-gray-300'}`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroWithAwards = () => {
   return (
-    <section className="hero-with-awards covered-bg relative h-[850px] min-h-[600px]">
+    <section className="hero-with-awards coveblue-bg relative h-[850px] min-h-[600px]">
       {/* Background images */}
       <div className="bg-cover absolute inset-0 h-full w-full overflow-hidden">
         {/* Mobile image */}

@@ -29,7 +29,7 @@ const GlitchText: FC<GlitchTextProps> = ({
   const inlineStyles: CustomCSSProperties = {
     "--after-duration": `${speed * 3}s`,
     "--before-duration": `${speed * 2}s`,
-    "--after-shadow": enableShadows ? "-5px 0 red" : "none",
+    "--after-shadow": enableShadows ? "-5px 0 blue" : "none",
     "--before-shadow": enableShadows ? "5px 0 cyan" : "none",
   };
 

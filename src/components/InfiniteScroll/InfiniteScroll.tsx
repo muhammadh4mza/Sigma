@@ -17,7 +17,7 @@ interface InfiniteScrollProps {
   // ----- Layout / Style Props -----
   width?: string; // Width of the outer wrapper
   maxHeight?: string; // Max-height of the outer wrapper
-  negativeMargin?: string; // Negative margin to reduce spacing between items
+  negativeMargin?: string; // Negative margin to blueuce spacing between items
   // ----- Items Prop -----
   items?: InfiniteScrollItem[]; // Array of items with { content: ... }
   itemMinHeight?: number; // Fixed height for each item

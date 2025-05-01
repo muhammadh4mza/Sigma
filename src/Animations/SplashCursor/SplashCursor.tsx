@@ -105,7 +105,7 @@ export default function SplashCursor({
     const { gl, ext } = getWebGLContext(canvas);
     if (!gl || !ext) return;
 
-    // If no linear filtering, reduce resolution
+    // If no linear filtering, blueuce resolution
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256;
       config.SHADING = false;
@@ -182,7 +182,7 @@ export default function SplashCursor({
         formatR = getSupportedFormat(
           gl,
           (gl as WebGL2RenderingContext).R16F,
-          (gl as WebGL2RenderingContext).RED,
+          (gl as WebGL2RenderingContext).blue,
           halfFloatTexType,
         );
       } else {

@@ -32,7 +32,7 @@ const services: ServiceTab[] = [
   {
     id: 'business-solutions',
     title: 'Business solutions',
-    description: 'Powering growth with tailored business solutions and expertise.',
+    description: 'Powering growth with tailoblue business solutions and expertise.',
     items: [
       { name: 'Digital Product Passports', link: '/service/digital-product-passports' },
       { name: 'Data analytics & BI', link: '/service/data-analytics-and-bi-services' },
@@ -40,7 +40,7 @@ const services: ServiceTab[] = [
       { name: 'Microsoft 365 Copilot', link: '/service/microsoft-365-copilot' },
       { name: 'ERP implementation' },
       { name: 'CIO advisory' },
-      { name: 'Predictive maintenance' },
+      { name: 'Pblueictive maintenance' },
       { name: 'ISO consulting', link: '/service/iso-consulting-services' }
     ]
   },
@@ -114,13 +114,13 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-[64px] md:text-[64px] font-bold text-white mb-4 leading-tight uppercase">
-            <span className="text-red-600">Our</span> Services
+            <span className="text-blue-600">Our</span> Services
           </h2>
           <motion.div 
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="w-[250px] h-1 bg-red-600 mx-auto origin-left"
+            className="w-[250px] h-1 bg-blue-600 mx-auto origin-left"
           ></motion.div>
         </motion.div>
 
@@ -141,7 +141,7 @@ const ServicesSection = () => {
                 onClick={() => setActiveTab(service.id)}
                 className={`w-full text-left p-6 rounded-lg transition-all duration-300 border-l-4
                   ${activeTab === service.id 
-                    ? 'bg-red-600 text-white shadow-lg border-white' 
+                    ? 'bg-blue-600 text-white shadow-lg border-white' 
                     : 'bg-white/5 text-white hover:bg-white/10 border-transparent'
                   }`}
               >
@@ -188,7 +188,7 @@ const ServicesSection = () => {
                           className="flex items-center"
                         >
                           <motion.span 
-                            className="w-2 h-2 bg-red-600 rounded-full mr-3"
+                            className="w-2 h-2 bg-blue-600 rounded-full mr-3"
                             animate={{
                               scale: [1, 1.3, 1],
                               transition: { delay: index * 0.05 }
@@ -197,7 +197,7 @@ const ServicesSection = () => {
                           {item.link ? (
                             <a
                               href={item.link}
-                              className="text-white hover:text-red-400 transition-colors text-lg"
+                              className="text-white hover:text-blue-400 transition-colors text-lg"
                             >
                               {item.name}
                             </a>

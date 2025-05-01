@@ -77,7 +77,7 @@ const HexagonHeroSection = () => {
               {awards.map((award, index) => (
                 <li 
                   key={index} 
-                  className="border-l-4 border-[#E30613] pl-4 py-2 hover:bg-gray-50 transition-colors duration-300"
+                  className="border-l-4 border-[#086AD7] pl-4 py-2 hover:bg-gray-50 transition-colors duration-300"
                 >
                   <p className="text-xl md:text-2xl font-bold text-gray-900">{award.value}</p>
                   <p className="text-sm md:text-base text-gray-600">{award.description}</p>

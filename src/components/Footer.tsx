@@ -8,12 +8,12 @@ const Footer = () => {
           {/* Left Column */}
           <div className="w-full md:w-1/2">
             <div className="mb-6">
-              <div className="text-2xl lg:text-3xl uppercase font-bold mb-4">Engineering the Digital Revolution</div>
+              <div className="text-2xl lg:text-3xl  uppercase font-bold mb-4">Engineering the Digital Revolution</div>
               <div className="text-gray-300">
                 <p className="mb-4">
                   Sigma Technology Group, part of the Sigma Group, is a privately-owned global technology consulting company with operations in Sweden, Hungary, China, Norway, Germany, Kosovo and Ukraine, and global delivery to Europe, the USA, and Asia. Sigma Technology Group offers cutting-edge expertise in software development, product information, embedded systems design & development, digital solutions, and IT infrastructure with expert consultants, offshore delivery, and development teams.
                 </p>
-                <a href="/contact/" className="inline-block bg-[#dc2626] text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-[#dc2626] transition-colors duration-300">Contact us</a>
+                <a href="/contact/" className="inline-block bg-[#086AD7] text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-[#086AD7] transition-colors duration-300">Contact us</a>
               </div>
             </div>
           </div>
@@ -70,9 +70,9 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="/">
               <img 
-                src="https://sigmatechnology.com/content/themes/sigma/img/SIGMA_Logo_NEG_2021_Tagline_RGB.svg?x25367" 
+                src="http://huscomintl.com/assets/img/logo-2.png" 
                 alt="Sigma Expect a better tomorrow" 
-                className="h-12"
+                className="h-16 w-16 object-contain"
               />
             </a>
           </div>

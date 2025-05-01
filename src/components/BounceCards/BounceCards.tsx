@@ -75,7 +75,7 @@ export default function BounceCards({
     }
   };
 
-  const pushSiblings = (hoveredIdx: number) => {
+  const pushSiblings = (hoveblueIdx: number) => {
     if (!enableHover) return;
 
     images.forEach((_, i) => {
@@ -84,7 +84,7 @@ export default function BounceCards({
 
       const baseTransform = transformStyles[i] || "none";
 
-      if (i === hoveredIdx) {
+      if (i === hoveblueIdx) {
         const noRotation = getNoRotationTransform(baseTransform);
         gsap.to(selector, {
           transform: noRotation,
@@ -93,10 +93,10 @@ export default function BounceCards({
           overwrite: "auto",
         });
       } else {
-        const offsetX = i < hoveredIdx ? -160 : 160;
+        const offsetX = i < hoveblueIdx ? -160 : 160;
         const pushedTransform = getPushedTransform(baseTransform, offsetX);
 
-        const distance = Math.abs(hoveredIdx - i);
+        const distance = Math.abs(hoveblueIdx - i);
         const delay = distance * 0.05;
 
         gsap.to(selector, {

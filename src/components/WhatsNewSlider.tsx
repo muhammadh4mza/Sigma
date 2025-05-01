@@ -95,7 +95,7 @@ const WhatsNewSlider = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="py-[75px] bg-[#f0e5e8] overflow-hidden"
+      className="py-[75px] bg-[#E6F0FB] overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div variants={itemVariants} className="mb-12">
@@ -157,12 +157,12 @@ const WhatsNewSlider = () => {
                       }}
                     />
                     
-                    {/* Red overlay animation */}
-                    <div className="absolute inset-0 bg-[#E30613] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                    {/* blue overlay animation */}
+                    <div className="absolute inset-0 bg-[#086AD7] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     
                     {/* Content with slide-up animation */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white bg-gradient-to-t from-black/80 to-transparent transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="text-sm font-medium text-[#E30613] mb-1">{item.category}</div>
+                      <div className="text-sm font-medium text-[#fff] mb-1">{item.category}</div>
                       <h3 className="text-xl font-bold mb-2 group-hover:underline">{item.title}</h3>
                       <div className="flex justify-between items-center">
                         <span className="text-sm">{item.date}</span>
@@ -185,13 +185,13 @@ const WhatsNewSlider = () => {
             <div className="flex space-x-4">
               <button
                 ref={prevRef}
-                className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#E30613] text-[#E30613] hover:bg-[#E30613] hover:text-white transition-colors duration-300"
+                className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#086AD7] text-[#086AD7] hover:bg-[#086AD7] hover:text-white transition-colors duration-300"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 ref={nextRef}
-                className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#E30613] text-[#E30613] hover:bg-[#E30613] hover:text-white transition-colors duration-300"
+                className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#086AD7] text-[#086AD7] hover:bg-[#086AD7] hover:text-white transition-colors duration-300"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -199,7 +199,7 @@ const WhatsNewSlider = () => {
             
             <a 
               href="/insights-library/" 
-              className="flex items-center bg-[#E30613] text-white px-6 py-3 rounded-md hover:bg-[#8e0f0c] transition-colors"
+              className="flex items-center bg-[#086AD7] text-white px-6 py-3 rounded-md hover:bg-[#081dd7] transition-colors"
             >
               Read all news
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" className="ml-2">

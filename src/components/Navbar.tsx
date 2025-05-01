@@ -14,47 +14,49 @@ const Header = () => {
     { name: 'Languages', link: '/languages' },
   ];
 
-  // Add scroll event listener to handle header shadow
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      // Check if the user has scrolled down more than 10 pixels
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Add the scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Clean up the event listener when the component unmounts
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrolled]); // Add scrolled as a dependency
 
   return (
-    <header className={`sticky top-0 z-50 bg-[#343434] shadow-sm transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-[#086AD7] transition-all duration-300 ${scrolled ? 'shadow-lg py-2' : 'py-1'}`}>
+      <div className="container mx-1px-1">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="brand">
             <Link to="/" className="inline-block">
               <img
-                src="https://sigmatechnology.com/content/themes/sigma/img/logo.svg?"
-                height="37"
+                src="http://huscomintl.com/assets/img/logo-2.png"
+                height="100px"
                 width="129"
                 alt="Sigma Technology"
-                className="h-9 w-auto"
+                className="h-20 w-20 object-contain"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-36">
             {menuItems.map((item, index) => (
               <div key={index} className="relative group">
                 <Link 
                   to={item.link} 
-                  className="text-white hover:text-[#dc2626] transition-colors duration-300 relative py-2"
+                  className="text-white text-[16px] uppercase hover:text-[#ffffff] font-semibold transition-colors duration-300 relative py-2"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#dc2626] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#ffffff] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </div>
             ))}
@@ -79,11 +81,11 @@ const Header = () => {
               <li key={index}>
                 <Link 
                   to={item.link} 
-                  className="text-white hover:text-[#dc2626] block py-2 transition-colors duration-300 relative"
+                  className="text-white hover:text-[#086AD7] block py-2 transition-colors duration-300 relative"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
-                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#dc2626] transition-all duration-300 hover:w-full"></span>
+                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#086AD7] transition-all duration-300 hover:w-full"></span>
                 </Link>
               </li>
             ))}

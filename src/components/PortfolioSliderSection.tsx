@@ -81,7 +81,7 @@ const PortfolioSliderSection = () => {
               modules={[Navigation]}
               spaceBetween={30}
               slidesPerView={1}
-              centeredSlides={true}
+              centeblueSlides={true}
               loop={true}
               navigation={{
                 nextEl: '.swiper-button-next',
@@ -146,7 +146,7 @@ const PortfolioSliderSection = () => {
               </div>
               <motion.a
                 href="sustainability/"
-                className="inline-flex items-center text-[15px] px-5 py-2 bg-[#dc2626] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 "
+                className="inline-flex items-center text-[15px] px-5 py-2 bg-[#086AD7] text-[#fff]  text-xl rounded-lg hover:bg-black hover:text-white transition-all duration-300 "
               //   whileHover={{ scale: 1.05 }}
               //   whileTap={{ scale: 0.95 }}
               >

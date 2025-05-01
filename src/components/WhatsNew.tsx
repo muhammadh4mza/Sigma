@@ -84,14 +84,14 @@ const WhatsNew = () => {
         <div className="navigation-container flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="nav-buttons flex gap-2">
             <button className="nav-button p-2 rounded-full hover:bg-gray-800 transition-colors">
-              <ChevronLeft className="w-5 h-5 text-[#8e0f0c]" />
+              <ChevronLeft className="w-5 h-5 text-[#086AD7]" />
             </button>
             <button className="nav-button p-2 rounded-full hover:bg-gray-800 transition-colors">
-              <ChevronRight className="w-5 h-5 text-[#8e0f0c]" />
+              <ChevronRight className="w-5 h-5 text-[#086AD7]" />
             </button>
           </div>
           
-          <a href="#" className="read-more-button flex items-center text-[#8e0f0c] hover:bg-[#8e0f0c] hover:text-white transition-colors px-4 py-2 rounded-md">
+          <a href="#" className="read-more-button flex items-center text-[#086AD7] hover:bg-[#086AD7] hover:text-white transition-colors px-4 py-2 rounded-md">
             READ ALL NEWS
             <ChevronRight className="w-4 h-4 ml-1" />
           </a>

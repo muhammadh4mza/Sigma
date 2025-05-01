@@ -50,7 +50,7 @@ const EducationTabs = () => {
                     {tabs.map((tab, index) => (
                       <li 
                         key={index}
-                        className={`px-4 py-3 cursor-pointer rounded ${activeTab === index ? 'border-b-4 border-red-700 text-black font-bold' : ' text-black'}`}
+                        className={`px-4 py-3 cursor-pointer rounded ${activeTab === index ? 'border-b-4 border-blue-700 text-black font-bold' : ' text-black'}`}
                         onClick={() => setActiveTab(index)}
                       >
                         <span>{tab.title}</span>

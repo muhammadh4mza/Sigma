@@ -4,7 +4,7 @@ const TextWithVideo = () => {
   return (
     <section className="relative py-16 md:py-24 bg-[white]">
       {/* Triangle Background */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[#f0e5e8] clip-path-triangle z-0"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[#E6F0FB] clip-path-triangle z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12">
@@ -60,8 +60,8 @@ const TextWithVideo = () => {
                         fillRule="evenodd" 
                         clipRule="evenodd" 
                         d="M43.2188 29.5L30.2187 37.2188L30.2188 21.7812L43.2188 29.5Z" 
-                        fill="#FF0000" 
-                        stroke="#FF0000" 
+                        fill="#086AD7" 
+                        stroke="#086AD7" 
                         strokeWidth="1.2" 
                         strokeLinejoin="round"
                       ></path>

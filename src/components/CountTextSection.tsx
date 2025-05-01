@@ -71,8 +71,8 @@ const CountTextSection = () => {
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   onClick={() => setActiveSlide(index)}
-                  className={`bg-[#dc26262c] backdrop-blur-sm rounded-lg p-6 border transition-all duration-300 text-left capitalize ${
-                    activeSlide === index ? 'border-white bg-[#DC2626]' : 'border-white/20'
+                  className={`bg-[#086AD72c] backdrop-blur-sm rounded-lg p-6 border transition-all duration-300 text-left capitalize ${
+                    activeSlide === index ? 'border-white bg-[#086AD7]' : 'border-white/20'
                   }`}
                 >
                   <p className="text-3xl font-bold text-white mb-2">{slide.count}</p>

@@ -84,15 +84,15 @@ export default function Carousel({
   const carouselItems = loop ? [...items, items[0]] : items;
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const x = useMotionValue(0);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isHoveblue, setIsHoveblue] = useState<boolean>(false);
   const [isResetting, setIsResetting] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
       const container = containerRef.current;
-      const handleMouseEnter = () => setIsHovered(true);
-      const handleMouseLeave = () => setIsHovered(false);
+      const handleMouseEnter = () => setIsHoveblue(true);
+      const handleMouseLeave = () => setIsHoveblue(false);
       container.addEventListener("mouseenter", handleMouseEnter);
       container.addEventListener("mouseleave", handleMouseLeave);
       return () => {
@@ -103,7 +103,7 @@ export default function Carousel({
   }, [pauseOnHover]);
 
   useEffect(() => {
-    if (autoplay && (!pauseOnHover || !isHovered)) {
+    if (autoplay && (!pauseOnHover || !isHoveblue)) {
       const timer = setInterval(() => {
         setCurrentIndex((prev) => {
           if (prev === items.length - 1 && loop) {
@@ -120,7 +120,7 @@ export default function Carousel({
   }, [
     autoplay,
     autoplayDelay,
-    isHovered,
+    isHoveblue,
     loop,
     items.length,
     carouselItems.length,
